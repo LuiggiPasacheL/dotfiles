@@ -1,0 +1,10 @@
+
+# Node
+node_modules
+
+# Fish
+fishd.*
+fish/config.fish.backup
+.config/fish/fish_history
+fish/fish_history
+fish/fish_variables
