@@ -1,5 +1,6 @@
 local nnoremap = require('utils.keymap').nnoremap
 local vnoremap = require('utils.keymap').vnoremap
+local xnoremap = require('utils.keymap').xnoremap
 
 vim.g.mapleader = " "
 
@@ -25,3 +26,5 @@ nnoremap('<leader>f', "<CMD>call VSCodeNotify('editor.action.formatDocument')<CR
 -- Commend line
 nnoremap('gcc', "<CMD>call VSCodeNotifyVisual('editor.action.commentLine', 1)<CR>")
 vnoremap('gcc', "<CMD>call VSCodeNotifyVisual('editor.action.commentLine', 1)<CR>")
+xnoremap('gcc', "<CMD>call VSCodeNotifyVisual('editor.action.commentLine', 1)<CR>")
+
