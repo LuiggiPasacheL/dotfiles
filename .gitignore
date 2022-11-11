@@ -9,7 +9,6 @@ nvim/plugin/*
 fishd.*
 fish/config.fish.backup
 fish/fish_history
-fish/fish_history
 fish/fish_variables
 fish/completions/
 fish/conf.d/
