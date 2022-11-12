@@ -14,11 +14,11 @@ return require('packer').startup(function(use)
         'hrsh7th/vim-vsnip'
     } -- CMP
 
-    use {
-        'nvim-treesitter/nvim-treesitter',
-        'windwp/nvim-ts-autotag',
-        run = ':TSUpdate'
-    } -- Treesitter
+    use("nvim-treesitter/nvim-treesitter", {
+        run = ":TSUpdate"
+    }) -- Treesitter
+
+    use 'windwp/nvim-ts-autotag' --html autotag
 
     use 'nvim-lualine/lualine.nvim' -- Statusline
 
