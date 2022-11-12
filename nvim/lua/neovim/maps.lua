@@ -10,8 +10,11 @@ nnoremap("<C-j>", "<C-w>j")
 nnoremap("<C-k>", "<C-w>k")
 nnoremap("<C-l>", "<C-w>l")
 
--- NvimTree
-nnoremap('<leader>e', '<cmd>NvimTreeToggle<CR>')
+-- NERDTree
+nnoremap('<leader>e', ':NERDTreeFocus<CR>')
+nnoremap('<C-e>', ':NERDTree<CR>')
+nnoremap('<C-t>', ':NERDTreeToggle<CR>')
+nnoremap('<C-f>', ':NERDTreeFind<CR>')
 
 -- Git
 nnoremap('<leader>g', '<cmd>Neogit<CR>')
@@ -25,3 +28,4 @@ nnoremap('<leader>fg', '<cmd>Telescope live_grep<cr>')
 nnoremap('<leader>fb', '<cmd>Telescope buffers<cr>')
 nnoremap('<leader>fh', '<cmd>Telescope help_tags<cr>')
 nnoremap('<leader>ft', '<cmd>TodoTelescope<CR>')
+

@@ -54,31 +54,7 @@ for type, icon in pairs(signs) do
 end
 
 -- File explorer settings
-require("nvim-tree").setup({
-    view = {
-        side = 'left',
-        mappings = {
-            list = {
-                { key = "u", action = "dir_up" },
-            },
-        },
-    },
-    filters = {
-        dotfiles = false,
-        custom = {
-            "node_modules",
-            "venv",
-            ".git"
-        },
-        exclude = {
-            ".env",
-            ".gitignore"
-        }
-    },
-    diagnostics = {
-        enable = true,
-    },
-})
+-- NerdTree in plugins
 
 -- Git
 local neogit = require('neogit')

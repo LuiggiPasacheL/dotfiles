@@ -27,8 +27,8 @@ return require('packer').startup(function(use)
     use 'folke/todo-comments.nvim' -- Todo
 
     use {
-        'kyazdani42/nvim-tree.lua',
-        requires = 'kyazdani42/nvim-web-devicons' -- Icons theme
+        'preservim/nerdtree',
+        requires = 'ryanoasis/vim-devicons' -- Icons theme
     } -- File explorer
 
     use {
