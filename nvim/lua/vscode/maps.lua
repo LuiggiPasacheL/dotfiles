@@ -28,3 +28,6 @@ nnoremap('gcc', "<CMD>call VSCodeNotifyVisual('editor.action.commentLine', 1)<CR
 vnoremap('gcc', "<CMD>call VSCodeNotifyVisual('editor.action.commentLine', 1)<CR>")
 xnoremap('gcc', "<CMD>call VSCodeNotifyVisual('editor.action.commentLine', 1)<CR>")
 
+-- Secondary bar
+nnoremap('<leader>t', "<CMD>call VSCodeNotify('todo-tree-view.focus')<CR>")
+nnoremap('<leader>d', "<CMD>call VSCodeNotify('workbench.panel.markers.view.focus')<CR>")
