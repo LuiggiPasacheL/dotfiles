@@ -1,13 +1,14 @@
 
 # Dotfiles
 
-## Comandos
+## Commands
 
+Clone into your home directory
 ```sh
-# clone into your home directory
-git clone https://github.com/LuiggiPasacheL/dotfiles .dotfiles
+git clone https://github.com/LuiggiPasacheL/dotfiles ~/.dotfiles
 ```
 
+Backup for old dir config
 ```sh
 cd ~/.config
 mv nvim nvim.bak
@@ -15,9 +16,10 @@ mv fish fish.bak
 mv starship.toml starship.toml.bak
 ```
 
+Copy configuration dir config
 ```sh
-cd ~/.dotfiles
-ln -s ~/.dotfiles/nvim nvim
-ln -s ~/.dotfiles/fish fish
-ln -s ~/.dotfiles/starship.toml starship.toml
+cd ~/.config
+cp ~/.dotfiles/nvim nvim
+cp ~/.dotfiles/fish fish
+cp ~/.dotfiles/starship.toml starship.toml
 ```
