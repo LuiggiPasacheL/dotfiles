@@ -19,7 +19,7 @@ mv starship.toml starship.toml.bak
 Copy configuration dir config
 ```sh
 cd ~/.config
-cp ~/.dotfiles/nvim nvim
-cp ~/.dotfiles/fish fish
-cp ~/.dotfiles/starship.toml starship.toml
+cp -r ~/.dotfiles/nvim nvim
+cp -r ~/.dotfiles/fish fish
+cp -r ~/.dotfiles/starship.toml starship.toml
 ```
