@@ -27,9 +27,12 @@ return require('packer').startup(function(use)
     use 'folke/todo-comments.nvim' -- Todo
 
     use {
-        'preservim/nerdtree',
-        requires = 'ryanoasis/vim-devicons' -- Icons theme
-    } -- File explorer
+      'nvim-tree/nvim-tree.lua',
+      requires = {
+        'nvim-tree/nvim-web-devicons', -- optional, for file icons
+      },
+      tag = 'nightly' -- optional, updated every week. (see issue #1193)
+    } -- Files explorer
 
     use {
         'TimUntersberger/neogit',

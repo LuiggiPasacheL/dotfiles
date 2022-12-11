@@ -54,7 +54,12 @@ for type, icon in pairs(signs) do
 end
 
 -- File explorer settings
--- NerdTree in plugins
+-- Nvim-tree
+require("nvim-tree").setup({
+    view = {
+        adaptive_size = true,
+    }
+})
 
 -- Git
 local neogit = require('neogit')
