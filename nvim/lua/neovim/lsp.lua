@@ -1,12 +1,3 @@
-require("mason").setup({
-    ui = {
-        icons = {
-            package_installed = "✓",
-            package_pending = "➜",
-            package_uninstalled = "✗"
-        }
-    }
-})
 
 -- Setup lspconfig.
 local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
@@ -39,50 +30,27 @@ local on_attach = function(client, bufnr)
     vim.keymap.set('n', '<space>D', vim.lsp.buf.type_definition, bufopts)
     vim.keymap.set('n', '<space>rn', vim.lsp.buf.rename, bufopts)
     vim.keymap.set('n', '<space>ca', vim.lsp.buf.code_action, bufopts)
-    vim.keymap.set('n', 'gr', vim.lsp.buf.references, bufopts)
+    vim.keymap.set('n', 'gr', require('telescope.builtin').lsp_references, bufopts)
     vim.keymap.set('n', '<space>f', function() vim.lsp.buf.format { async = true } end, bufopts)
 end
 
+-- Mason
+
+require("mason").setup({
+    ui =  {
+        icons = {
+            package_installed = "✓",
+            package_pending = "➜",
+            package_uninstalled = "✗"
+        }
+    }
+})
+
+require("mason-lspconfig").setup({
+    ensure_installed = { "sumneko_lua", "tsserver", "html", "cssls" }
+})
+
 -- LSP servers
-local servers = { 'tsserver', 'intelephense', 'html', 'cssls' } -- Servers with default settings
-
-for _, lsp in pairs(servers) do
-    require('lspconfig')[lsp].setup {
-        on_attach = on_attach,
-        flags = {
-            debounce_text_changes = 150,
-        },
-        capabilities = capabilities
-    }
-end
-
-require('lspconfig')['pyright'].setup {
-    on_attach = on_attach,
-    flags = {
-        debounce_text_changes = 150,
-    },
-    capabilities = capabilities,
-    settings = {
-        python = {
-            analysis = {
-                typeCheckingMode = "off"
-            },
-        },
-    },
-}
-
-require('lspconfig')['emmet_ls'].setup {
-    on_attach = on_attach,
-    capabilities = capabilities,
-    filetypes = { 'html', 'htmldjango', 'typescriptreact', 'javascriptreact', 'css', 'sass', 'scss', 'less' },
-    init_options = {
-        html = {
-            options = {
-                ["bem.enables"] = true,
-            },
-        },
-    }
-}
 
 require('lspconfig')['sumneko_lua'].setup { -- Server with custom settings
     on_attach = on_attach,
@@ -101,3 +69,64 @@ require('lspconfig')['sumneko_lua'].setup { -- Server with custom settings
     },
     capabilities = capabilities
 }
+
+require('lspconfig')['emmet_ls'].setup {
+    on_attach = on_attach,
+    capabilities = capabilities,
+    filetypes = { 'html', 'htmldjango', 'typescriptreact', 'javascriptreact', 'css', 'sass', 'scss', 'less' },
+    init_options = {
+        html = {
+            options = {
+                ["bem.enables"] = true,
+            },
+        },
+    }
+}
+
+require('lspconfig')['html'].setup {
+    on_attach = on_attach,
+    flags = {
+        debounce_text_changes = 150,
+    },
+    capabilities = capabilities
+}
+
+require('lspconfig')['cssls'].setup {
+    on_attach = on_attach,
+    flags = {
+        debounce_text_changes = 150,
+    },
+    capabilities = capabilities
+}
+
+require('lspconfig')['tsserver'].setup {
+    on_attach = on_attach,
+    flags = {
+        debounce_text_changes = 150,
+    },
+    capabilities = capabilities
+}
+
+require('lspconfig')['pyright'].setup {
+    on_attach = on_attach,
+    flags = {
+        debounce_text_changes = 150,
+    },
+    capabilities = capabilities,
+    settings = {
+        python = {
+            analysis = {
+                typeCheckingMode = "off"
+            },
+        },
+    },
+}
+
+-- Template lspconfig
+-- require('lspconfig')['lsp_server_name'].setup {
+--     on_attach = on_attach,
+--     flags = {
+--         debounce_text_changes = 150,
+--     },
+--     capabilities = capabilities
+-- }
