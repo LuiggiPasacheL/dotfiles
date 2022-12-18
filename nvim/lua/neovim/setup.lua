@@ -62,8 +62,8 @@ require("nvim-tree").setup({
 })
 
 -- Git
-local neogit = require('neogit')
-neogit.setup {}
+-- local neogit = require('neogit')
+-- neogit.setup {}
 
 -- Todo
 local todo = require("todo-comments")

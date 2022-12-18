@@ -4,6 +4,7 @@ return require('packer').startup(function(use)
     use {
         'neovim/nvim-lspconfig',
         'williamboman/mason.nvim',
+        'williamboman/mason-lspconfig.nvim',
     } -- LSP
 
     use {
@@ -22,7 +23,10 @@ return require('packer').startup(function(use)
 
     use 'nvim-lualine/lualine.nvim' -- Statusline
 
-    use 'nvim-telescope/telescope.nvim' -- Telescope
+    use {
+      'nvim-telescope/telescope.nvim', tag = '0.1.0',
+      requires = { 'nvim-lua/plenary.nvim' }
+    }
 
     use 'folke/todo-comments.nvim' -- Todo
 
@@ -34,10 +38,9 @@ return require('packer').startup(function(use)
       tag = 'nightly' -- optional, updated every week. (see issue #1193)
     } -- Files explorer
 
-    use {
-        'TimUntersberger/neogit',
-         requires = 'nvim-lua/plenary.nvim'
-    } -- Git integration
+    use 'tpope/vim-fugitive' -- Git integration
+
+    use ''
 
     -- Vscode plugins
 
