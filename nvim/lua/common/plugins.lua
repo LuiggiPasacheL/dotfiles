@@ -4,6 +4,7 @@ return require('packer').startup(function(use)
     use {
         'neovim/nvim-lspconfig',
         'williamboman/mason.nvim',
+        'williamboman/mason-lspconfig.nvim',
     } -- LSP
 
     use {
@@ -34,10 +35,7 @@ return require('packer').startup(function(use)
       tag = 'nightly' -- optional, updated every week. (see issue #1193)
     } -- Files explorer
 
-    use {
-        'TimUntersberger/neogit',
-         requires = 'nvim-lua/plenary.nvim'
-    } -- Git integration
+    use 'tpope/vim-fugitive' -- Git integration
 
     -- Vscode plugins
 

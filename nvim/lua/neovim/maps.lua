@@ -16,7 +16,7 @@ nnoremap('<C-A-e>', ':NvimTreeFocus<CR>')
 nnoremap('<leader>e', ':NvimTreeToggle<CR>')
 
 -- Git
-nnoremap('<leader>g', '<cmd>Neogit<CR>')
+nnoremap('<leader>g', '<cmd>G<CR>')
 
 -- Todos
 nnoremap('<leader>t', '<cmd>TodoQuickFix<CR>')
