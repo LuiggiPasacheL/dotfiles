@@ -24,23 +24,21 @@ return require('packer').startup(function(use)
     use 'nvim-lualine/lualine.nvim' -- Statusline
 
     use {
-      'nvim-telescope/telescope.nvim', tag = '0.1.0',
-      requires = { 'nvim-lua/plenary.nvim' }
+        'nvim-telescope/telescope.nvim', tag = '0.1.0',
+        requires = { 'nvim-lua/plenary.nvim' }
     } -- Telescope
 
     use 'folke/todo-comments.nvim' -- Todo
 
     use {
-      'nvim-tree/nvim-tree.lua',
-      requires = {
-        'nvim-tree/nvim-web-devicons', -- optional, for file icons
-      },
-      tag = 'nightly' -- optional, updated every week. (see issue #1193)
+        'nvim-tree/nvim-tree.lua',
+        requires = {
+            'nvim-tree/nvim-web-devicons', -- optional, for file icons
+        },
+        tag = 'nightly' -- optional, updated every week. (see issue #1193)
     } -- Files explorer
 
     use 'tpope/vim-fugitive' -- Git integration
-
-    use ''
 
     -- Vscode plugins
 
