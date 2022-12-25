@@ -1,6 +1,8 @@
 return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim' -- Packer
 
+    -- NOTE: Neovim plugins
+
     use {
         'neovim/nvim-lspconfig',
         'williamboman/mason.nvim',
@@ -33,18 +35,18 @@ return require('packer').startup(function(use)
     use {
         'nvim-tree/nvim-tree.lua',
         requires = {
-            'nvim-tree/nvim-web-devicons', -- optional, for file icons
+            'nvim-tree/nvim-web-devicons',
         },
-        tag = 'nightly' -- optional, updated every week. (see issue #1193)
+        tag = 'nightly'
     } -- Files explorer
 
     use 'tpope/vim-fugitive' -- Git integration
 
-    -- Vscode plugins
+    use 'numToStr/Comment.nvim' -- Comments with "gcc"
+
+    -- NOTE: Vscode plugins
 
     use 'windwp/nvim-autopairs' -- Autopairs
-
-    use 'numToStr/Comment.nvim' -- Comments with "gcc"
 
     use 'machakann/vim-sandwich' -- Surround
 
