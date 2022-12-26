@@ -34,6 +34,14 @@ local on_attach = function(client, bufnr)
     vim.keymap.set('n', '<space>f', function() vim.lsp.buf.format { async = true } end, bufopts)
 end
 
+-- this is for diagnositcs signs on the line number column
+-- use this to beautify the plain E W signs to more fun ones
+local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }
+for type, icon in pairs(signs) do
+    local hl = "DiagnosticSign" .. type
+    vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
+end
+
 -- Mason
 
 require("mason").setup({
@@ -121,6 +129,7 @@ require('lspconfig')['pyright'].setup {
         },
     },
 }
+
 
 -- Template lspconfig
 -- require('lspconfig')['lsp_server_name'].setup {

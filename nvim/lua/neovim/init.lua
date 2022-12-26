@@ -1,3 +1,3 @@
 require('neovim.colors')
 require('neovim.maps')
-require('neovim.setup')
+require('neovim.plugins')
