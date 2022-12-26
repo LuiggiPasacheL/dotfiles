@@ -1,4 +1,4 @@
-local nnoremap = require('utils.keymap').nnoremap
+local nnoremap = require('global.keymap').nnoremap
 
 -- Save and exit files
 nnoremap("<leader>w", "<cmd>w<CR>")

@@ -1,6 +1,6 @@
-local nnoremap = require('utils.keymap').nnoremap
-local vnoremap = require('utils.keymap').vnoremap
-local xnoremap = require('utils.keymap').xnoremap
+local nnoremap = require('global.keymap').nnoremap
+local vnoremap = require('global.keymap').vnoremap
+local xnoremap = require('global.keymap').xnoremap
 
 vim.g.mapleader = " "
 

@@ -1,9 +1,18 @@
--- Common settings
+
+-- Global
+require('global')
+
+
+-- NOTE: Settings
+
+-- Common
 require('common')
 if vim.g.vscode then
-    -- VSCode settings
+    -- VSCode
     require('vscode')
 else
-    -- Ordinary Neovim setting
+    -- Ordinary Neovim
     require('neovim')
 end
+
+

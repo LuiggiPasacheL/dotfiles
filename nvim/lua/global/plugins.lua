@@ -1,6 +1,8 @@
 return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim' -- Packer
 
+    -- NOTE: Neovim plugins
+
     use {
         'neovim/nvim-lspconfig',
         'williamboman/mason.nvim',
@@ -23,25 +25,28 @@ return require('packer').startup(function(use)
 
     use 'nvim-lualine/lualine.nvim' -- Statusline
 
-    use 'nvim-telescope/telescope.nvim' -- Telescope
+    use {
+        'nvim-telescope/telescope.nvim', tag = '0.1.0',
+        requires = { 'nvim-lua/plenary.nvim' }
+    } -- Telescope
 
     use 'folke/todo-comments.nvim' -- Todo
 
     use {
-      'nvim-tree/nvim-tree.lua',
-      requires = {
-        'nvim-tree/nvim-web-devicons', -- optional, for file icons
-      },
-      tag = 'nightly' -- optional, updated every week. (see issue #1193)
+        'nvim-tree/nvim-tree.lua',
+        requires = {
+            'nvim-tree/nvim-web-devicons',
+        },
+        tag = 'nightly'
     } -- Files explorer
 
     use 'tpope/vim-fugitive' -- Git integration
 
-    -- Vscode plugins
-
     use 'windwp/nvim-autopairs' -- Autopairs
 
     use 'numToStr/Comment.nvim' -- Comments with "gcc"
+
+    -- NOTE: Vscode plugins
 
     use 'machakann/vim-sandwich' -- Surround
 
