@@ -24,10 +24,8 @@ nnoremap('gl', "<CMD>call VSCodeNotify('editor.action.openLink')<CR>")
 nnoremap('<leader>f', "<CMD>call VSCodeNotify('editor.action.formatDocument')<CR>")
 
 -- Commend line
-nnoremap('gcc', "<CMD>call VSCodeNotifyVisual('editor.action.commentLine', 1)<CR>")
+nnoremap('gcc', "<CMD>call VSCodeNotifyRange('editor.action.commentLine', getline('.'), getline('.') + v:count1, 1)<CR>")
 vnoremap('gcc', "<CMD>call VSCodeNotifyVisual('editor.action.commentLine', 1)<CR>")
-xnoremap('gcc', "<CMD>call VSCodeNotifyVisual('editor.action.commentLine', 1)<CR>")
 
 -- Secondary bar
 nnoremap('<leader>t', "<CMD>call VSCodeNotify('todo-tree-view.focus')<CR>")
-nnoremap('<leader>d', "<CMD>call VSCodeNotify('workbench.panel.markers.view.focus')<CR>")
