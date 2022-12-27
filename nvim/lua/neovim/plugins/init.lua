@@ -3,6 +3,8 @@ require('neovim.plugins.lsp')
 
 require('neovim.plugins.cmp')
 
+require('neovim.plugins.comment')
+
 require("nvim-autopairs").setup({})
 
 -- File explorer settings
