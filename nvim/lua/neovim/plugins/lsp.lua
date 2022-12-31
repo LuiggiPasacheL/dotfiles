@@ -1,6 +1,7 @@
 
 -- Setup lspconfig.
 local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
+capabilities.textDocument.completion.completionItem.snippetSupport = true
 
 -- Diagnostics
 local opts = { noremap = true, silent = true }
@@ -81,7 +82,8 @@ require('lspconfig')['sumneko_lua'].setup { -- Server with custom settings
 require('lspconfig')['emmet_ls'].setup {
     on_attach = on_attach,
     capabilities = capabilities,
-    filetypes = { 'html', 'htmldjango', 'typescriptreact', 'javascriptreact', 'css', 'sass', 'scss', 'less' },
+    filetypes = { 'html', 'htmldjango', 'typescriptreact', 'javascriptreact' },
+-- , 'css', 'sass', 'scss', 'less'
     init_options = {
         html = {
             options = {

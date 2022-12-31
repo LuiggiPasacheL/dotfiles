@@ -5,36 +5,15 @@ require('neovim.plugins.cmp')
 
 require('neovim.plugins.comment')
 
-require("nvim-autopairs").setup({})
+require('neovim.plugins.autotag')
 
--- File explorer settings
--- Nvim-tree
-require("nvim-tree").setup({
-    view = {
-        adaptive_size = true,
-    }
-})
+require('neovim.plugins.nvimtree')
 
--- Git
--- local neogit = require('neogit')
--- neogit.setup {}
+require('neovim.plugins.todo')
 
--- Todo
-local todo = require("todo-comments")
-todo.setup {
-    -- Requirement
-    -- scoop install ripgrep
-}
+require('neovim.plugins.telescope')
 
--- Telescope
-local telescope = require("telescope")
-telescope.setup {
-    mappings = {
-        i = {
-            -- map actions.which_key to <C-h> (default: <C-/>)
-            -- actions.which_key shows the mappings for your picker,
-            -- e.g. git_{create, delete, ...}_branch for the git_branches picker
-            ["<C-h>"] = "which_key"
-        }
-    }
-}
+require('neovim.plugins.autopairs')
+
+
+
