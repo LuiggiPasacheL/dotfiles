@@ -35,10 +35,8 @@ vnoremap('<leader>P','"+P')
 nnoremap("<C-h>", "<C-w>h")
 nnoremap("<C-l>", "<C-w>l")
 
--- Vim surround ( Replace "s" for "z")
--- TODO: Change to Lua
+-- Vim S(z)urround
 vim.cmd[[
-let g:sandwich_no_default_key_mappings = 1
 silent! nmap <unique><silent> zd <Plug>(operator-sandwich-delete)<Plug>(operator-sandwich-release-count)<Plug>(textobj-sandwich-query-a)
 silent! nmap <unique><silent> zr <Plug>(operator-sandwich-replace)<Plug>(operator-sandwich-release-count)<Plug>(textobj-sandwich-query-a)
 silent! nmap <unique><silent> zdb <Plug>(operator-sandwich-delete)<Plug>(operator-sandwich-release-count)<Plug>(textobj-sandwich-auto-a)
