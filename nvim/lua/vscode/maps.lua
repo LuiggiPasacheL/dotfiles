@@ -1,10 +1,6 @@
 local nnoremap = require('global.keymap').nnoremap
 local vnoremap = require('global.keymap').vnoremap
 
--- Save and exit files
-nnoremap('<leader>q', "<CMD>call VSCodeNotify('workbench.action.closeActiveEditor')<CR>")
-nnoremap('<leader>w', "<CMD>call VSCodeNotify('workbench.action.files.save')<CR>")
-
 -- File search
 nnoremap('<leader>ff', "<CMD>Ex<CR>")
 nnoremap('<leader>fs', "<CMD>call VSCodeNotify('workbench.action.gotoSymbol')<CR>")
@@ -26,9 +22,3 @@ vnoremap('gcc', "<CMD>call VSCodeNotifyVisual('editor.action.commentLine', 1)<CR
 
 -- Secondary bar
 nnoremap('<leader>t', "<CMD>call VSCodeNotify('todo-tree-view.focus')<CR>")
-
--- Multiple editors
-nnoremap("<C-h>", "<C-w>h")
-nnoremap("<C-j>", "<C-w>j")
-nnoremap("<C-k>", "<C-w>k")
-nnoremap("<C-l>", "<C-w>l")

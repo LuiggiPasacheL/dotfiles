@@ -1,9 +1,5 @@
 local nnoremap = require('global.keymap').nnoremap
 
--- Save and exit files
-nnoremap("<leader>w", "<cmd>w<CR>")
-nnoremap("<leader>q", "<cmd>q<CR>")
-
 -- NERDTree
 nnoremap('<C-A-e>', ':NvimTreeFocus<CR>')
 nnoremap('<leader>e', ':NvimTreeToggle<CR>')
