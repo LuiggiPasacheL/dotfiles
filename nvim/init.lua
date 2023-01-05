@@ -15,4 +15,3 @@ else
     require('neovim')
 end
 
-

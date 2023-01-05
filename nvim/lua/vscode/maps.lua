@@ -1,6 +1,5 @@
 local nnoremap = require('global.keymap').nnoremap
 local vnoremap = require('global.keymap').vnoremap
-local xnoremap = require('global.keymap').xnoremap
 
 vim.g.mapleader = " "
 
@@ -29,3 +28,9 @@ vnoremap('gcc', "<CMD>call VSCodeNotifyVisual('editor.action.commentLine', 1)<CR
 
 -- Secondary bar
 nnoremap('<leader>t', "<CMD>call VSCodeNotify('todo-tree-view.focus')<CR>")
+
+-- Multiple editors
+nnoremap("<C-h>", "<C-w>h")
+nnoremap("<C-j>", "<C-w>j")
+nnoremap("<C-k>", "<C-w>k")
+nnoremap("<C-l>", "<C-w>l")

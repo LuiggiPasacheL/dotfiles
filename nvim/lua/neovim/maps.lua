@@ -11,7 +11,6 @@ nnoremap("<C-k>", "<C-w>k")
 nnoremap("<C-l>", "<C-w>l")
 
 -- NERDTree
-
 nnoremap('<C-A-e>', ':NvimTreeFocus<CR>')
 nnoremap('<leader>e', ':NvimTreeToggle<CR>')
 
