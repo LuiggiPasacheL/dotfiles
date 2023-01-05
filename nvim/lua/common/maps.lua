@@ -27,6 +27,12 @@ nnoremap('<leader>P','"+P')
 vnoremap('<leader>p','"+p')
 vnoremap('<leader>P','"+P')
 
+-- Navigation
+nnoremap("<C-h>", "<C-w>h")
+nnoremap("<C-j>", "<C-w>j")
+nnoremap("<C-k>", "<C-w>k")
+nnoremap("<C-l>", "<C-w>l")
+
 -- Vim surround ( Replace "s" for "z")
 -- TODO: Change to Lua
 vim.cmd[[

@@ -1,8 +1,6 @@
 local nnoremap = require('global.keymap').nnoremap
 local vnoremap = require('global.keymap').vnoremap
 
-vim.g.mapleader = " "
-
 -- Save and exit files
 nnoremap('<leader>q', "<CMD>call VSCodeNotify('workbench.action.closeActiveEditor')<CR>")
 nnoremap('<leader>w', "<CMD>call VSCodeNotify('workbench.action.files.save')<CR>")
