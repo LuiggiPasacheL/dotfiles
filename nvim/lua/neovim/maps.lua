@@ -18,6 +18,6 @@ nnoremap('<leader>fh', '<cmd>Telescope help_tags<cr>')
 nnoremap('<leader>ft', '<cmd>TodoTelescope<CR>')
 
 -- Save and exit files
-nnoremap("<leader>w", "<C-w>w")
-nnoremap("<leader>q", "<C-w>q")
+nnoremap("<leader>w", "<cmd>w<CR>")
+nnoremap("<leader>q", "<cmd>q<CR>")
 

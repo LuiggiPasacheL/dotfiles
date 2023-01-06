@@ -4,10 +4,6 @@ local vnoremap = require('global.keymap').vnoremap
 vim.g.mapleader = " "
 vim.g.camelcasemotion_key = ','
 
--- Save and exit files
-nnoremap("<leader>w", "<C-w>w")
-nnoremap("<leader>q", "<C-w>q")
-
 -- Copy to clipboard
 vnoremap('<leader>y', '"+y')
 nnoremap('<leader>Y', '"+yg_')
