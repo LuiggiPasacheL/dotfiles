@@ -1,4 +1,4 @@
 
 local opt = vim.opt
 
-opt.nobackup = true
+opt.backup = false
