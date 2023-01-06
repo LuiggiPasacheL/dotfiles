@@ -5,8 +5,6 @@ require('global')
 
 -- NOTE: Settings
 
--- Common
-require('common')
 if vim.g.vscode then
     -- VSCode
     require('vscode')
@@ -15,4 +13,5 @@ else
     require('neovim')
 end
 
-
+-- Common
+require('common')
