@@ -17,3 +17,7 @@ nnoremap('<leader>fb', '<cmd>Telescope buffers<cr>')
 nnoremap('<leader>fh', '<cmd>Telescope help_tags<cr>')
 nnoremap('<leader>ft', '<cmd>TodoTelescope<CR>')
 
+-- Save and exit files
+nnoremap("<leader>w", "<C-w>w")
+nnoremap("<leader>q", "<C-w>q")
+

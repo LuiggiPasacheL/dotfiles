@@ -22,3 +22,7 @@ vnoremap('gcc', "<CMD>call VSCodeNotifyVisual('editor.action.commentLine', 1)<CR
 
 -- Secondary bar
 nnoremap('<leader>t', "<CMD>call VSCodeNotify('todo-tree-view.focus')<CR>")
+
+-- Save and exit files
+nnoremap('<leader>q', "<CMD>call VSCodeNotify('workbench.action.closeActiveEditor')<CR>")
+nnoremap('<leader>w', "<CMD>call VSCodeNotify('workbench.action.files.save')<CR>")
