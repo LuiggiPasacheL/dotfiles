@@ -1,1 +1,1 @@
-require('global.plugins')
+require('global.packer')
