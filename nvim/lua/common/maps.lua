@@ -31,6 +31,10 @@ vnoremap('<leader>P','"+P')
 nnoremap("<C-h>", "<C-w>h")
 nnoremap("<C-l>", "<C-w>l")
 
+-- Reselecting when indenting multiple times
+vnoremap("<", "<gv")
+vnoremap(">", ">gv")
+
 -- Vim S(z)urround
 vim.cmd[[
 silent! nmap <unique><silent> zd <Plug>(operator-sandwich-delete)<Plug>(operator-sandwich-release-count)<Plug>(textobj-sandwich-query-a)
