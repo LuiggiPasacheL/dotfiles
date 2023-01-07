@@ -1,5 +1,9 @@
 local nnoremap = require('global.keymap').nnoremap
 
+-- Save and exit files
+nnoremap("<leader>w", ":w<CR>")
+nnoremap("<leader>q", ":q<CR>")
+
 -- NERDTree
 nnoremap('<C-A-e>', ':NvimTreeFocus<CR>')
 nnoremap('<leader>e', ':NvimTreeToggle<CR>')
@@ -16,8 +20,3 @@ nnoremap('<leader>fg', '<cmd>Telescope live_grep<cr>')
 nnoremap('<leader>fb', '<cmd>Telescope buffers<cr>')
 nnoremap('<leader>fh', '<cmd>Telescope help_tags<cr>')
 nnoremap('<leader>ft', '<cmd>TodoTelescope<CR>')
-
--- Save and exit files
-nnoremap("<leader>w", "<cmd>w<CR>")
-nnoremap("<leader>q", "<cmd>q<CR>")
-
