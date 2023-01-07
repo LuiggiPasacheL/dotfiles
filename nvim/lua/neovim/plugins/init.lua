@@ -15,5 +15,5 @@ require('neovim.plugins.telescope')
 
 require('neovim.plugins.autopairs')
 
-
+require('neovim.plugins.treesitter')
 
