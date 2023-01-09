@@ -35,6 +35,10 @@ nnoremap("<C-l>", "<C-w>l")
 vnoremap("<", "<gv")
 vnoremap(">", ">gv")
 
+-- Move lines
+vnoremap("J", ":m '>+1<CR>gv=gv")
+vnoremap("K", ":m '<-2<CR>gv=gv")
+
 -- Vim S(z)urround
 vim.cmd[[
 silent! nmap <unique><silent> zd <Plug>(operator-sandwich-delete)<Plug>(operator-sandwich-release-count)<Plug>(textobj-sandwich-query-a)
