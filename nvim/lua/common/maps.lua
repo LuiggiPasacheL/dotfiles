@@ -35,9 +35,8 @@ nnoremap("<C-l>", "<C-w>l")
 vnoremap("<", "<gv")
 vnoremap(">", ">gv")
 
--- Move lines
-vnoremap("J", ":m '>+1<CR>gv=gv")
-vnoremap("K", ":m '<-2<CR>gv=gv")
+vnoremap("J", ":m '>+1<CR>gv")
+vnoremap("K", ":m '<-2<CR>gv")
 
 -- Vim S(z)urround
 vim.cmd[[
