@@ -1,9 +1,24 @@
-
 local telescope = require("telescope")
-telescope.setup {
-    mappings = {
-        i = {
-            ["<C-h>"] = "which_key"
-        }
+local actions = require("telescope.actions")
+
+telescope.setup({
+    defaults = {
+        mappings = {
+            n = {
+                ["kj"] = "close",
+            },
+            i = {
+                ["<esc>"] = actions.close,
+                ["<C-j>"] = actions.move_selection_next,
+                ["<C-k>"] = actions.move_selection_previous,
+            },
+        },
+        -- mappings = {
+        --     i = {
+        --         ["<esc>"] = actions.close,
+        --         ["<C-j>"] = actions.move_selection_next,
+        --         ["<C-k>"] = actions.move_selection_previous,
+        --     },
+        -- }
     }
-}
+})
