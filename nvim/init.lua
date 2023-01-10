@@ -1,10 +1,7 @@
 
--- Global
-require('global')
-
+require('plugins')
 
 -- NOTE: Settings
-
 -- Common
 require('common')
 if vim.g.vscode then

@@ -15,8 +15,7 @@ cmp.setup({
         ['<C-b>'] = cmp.mapping.scroll_docs(-4),
         ['<C-u>'] = cmp.mapping.scroll_docs(4),
         ['<C-space>'] = cmp.mapping.complete(),
-        ['<C-@>'] = cmp.mapping.complete(),
-        ['<C-s>'] = cmp.mapping.complete(), -- for windows terminar (ctrl space not working)
+        ['<C-s>'] = cmp.mapping.complete(), -- for windows terminal (ctrl space not working)
         ['<C-e>'] = cmp.mapping.abort(),
         ['<Up>'] = cmp.mapping.select_prev_item(),
         ['<Down>'] = cmp.mapping.select_next_item(),
@@ -26,7 +25,7 @@ cmp.setup({
     }),
     sources = cmp.config.sources({
         { name = 'nvim_lsp' },
-        { name = 'vsnip' }, -- vsnip
+        { name = 'vsnip' },
     }, {
         { name = 'buffer' },
     })

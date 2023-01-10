@@ -1,32 +1,28 @@
-local nnoremap = require('global.keymap').nnoremap
-local vnoremap = require('global.keymap').vnoremap
-
-vim.g.mapleader = " "
 
 -- Save and exit files
-nnoremap('<leader>q', "<CMD>call VSCodeNotify('workbench.action.closeActiveEditor')<CR>")
-nnoremap('<leader>w', "<CMD>call VSCodeNotify('workbench.action.files.save')<CR>")
+vim.keymap.set('n','<leader>q', "<CMD>call VSCodeNotify('workbench.action.closeActiveEditor')<CR>")
+vim.keymap.set('n','<leader>w', "<CMD>call VSCodeNotify('workbench.action.files.save')<CR>")
 
 -- File search
-nnoremap('<leader>ff', "<CMD>Ex<CR>")
-nnoremap('<leader>fs', "<CMD>call VSCodeNotify('workbench.action.gotoSymbol')<CR>")
-nnoremap('<leader>fb', "<CMD>call VSCodeNotify('workbench.action.quickOpenLeastRecentlyUsedEditor')<CR>")
+vim.keymap.set('n','<C-p>', "<CMD>Ex<CR>")
+vim.keymap.set('n','<C-o>', "<CMD>call VSCodeNotify('workbench.action.quickOpenLeastRecentlyUsedEditor')<CR>")
+vim.keymap.set('n','<C-s>', "<CMD>call VSCodeNotify('workbench.action.gotoSymbol')<CR>")
 
 -- Zen mode
-nnoremap('<leader>z', "<CMD>call VSCodeNotify('workbench.action.toggleZenMode')<CR>")
+vim.keymap.set('n','<leader>z', "<CMD>call VSCodeNotify('workbench.action.toggleZenMode')<CR>")
 
 -- Git
-nnoremap('<leader>g', "<CMD>call VSCodeNotify('magit.status')<CR>")
+vim.keymap.set('n','<leader>g', "<CMD>call VSCodeNotify('magit.status')<CR>")
 
 -- Go to link
-nnoremap('gl', "<CMD>call VSCodeNotify('editor.action.openLink')<CR>")
+vim.keymap.set('n','gl', "<CMD>call VSCodeNotify('editor.action.openLink')<CR>")
 
 -- Format document
-nnoremap('<leader>f', "<CMD>call VSCodeNotify('editor.action.formatDocument')<CR>")
+vim.keymap.set('n','<leader>f', "<CMD>call VSCodeNotify('editor.action.formatDocument')<CR>")
 
 -- Commend line
-nnoremap('gcc', "<CMD>call VSCodeNotifyRange('editor.action.commentLine', getline('.'), getline('.') + v:count1, 1)<CR>")
-vnoremap('gcc', "<CMD>call VSCodeNotifyVisual('editor.action.commentLine', 1)<CR>")
+vim.keymap.set('n','gcc', "<CMD>call VSCodeNotifyRange('editor.action.commentLine', getline('.'), getline('.') + v:count1, 1)<CR>")
+vim.keymap.set('v','gcc', "<CMD>call VSCodeNotifyVisual('editor.action.commentLine', 1)<CR>")
 
 -- Secondary bar
-nnoremap('<leader>t', "<CMD>call VSCodeNotify('todo-tree-view.focus')<CR>")
+vim.keymap.set('n','<leader>t', "<CMD>call VSCodeNotify('todo-tree-view.focus')<CR>")

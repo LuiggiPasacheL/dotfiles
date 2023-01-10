@@ -1,42 +1,23 @@
-local nnoremap = require('global.keymap').nnoremap
-local vnoremap = require('global.keymap').vnoremap
-
-vim.g.mapleader = " "
-vim.g.camelcasemotion_key = ','
 
 -- Copy to clipboard
-vnoremap('<leader>y', '"+y')
-nnoremap('<leader>Y', '"+yg_')
-nnoremap('<leader>y', '"+y')
-nnoremap('<leader>yy', '"+yy')
+vim.keymap.set('v','<leader>y', '"+y')
+vim.keymap.set('n','<leader>Y', '"+yg_')
+vim.keymap.set('n','<leader>y', '"+y')
+vim.keymap.set('n','<leader>yy', '"+yy')
 
--- Paste from clipboard
-nnoremap('<leader>p','"+p')
-nnoremap('<leader>P','"+P')
-vnoremap('<leader>p','"+p')
-vnoremap('<leader>P','"+P')
-
--- Copy to clipboard
-vnoremap('C-S-c', '"+y')
-nnoremap('C-S-c', '"+yg_')
-nnoremap('C-S-c', '"+y')
-
--- Paste from clipboard
-nnoremap('<leader>p','"+p')
-nnoremap('<leader>P','"+P')
-vnoremap('<leader>p','"+p')
-vnoremap('<leader>P','"+P')
+-- Paste from clipboard <C-S-v>
 
 -- Navigation
-nnoremap("<C-h>", "<C-w>h")
-nnoremap("<C-l>", "<C-w>l")
+vim.keymap.set('n',"<C-h>", "<C-w>h")
+vim.keymap.set('n',"<C-l>", "<C-w>l")
 
 -- Reselecting when indenting multiple times
-vnoremap("<", "<gv")
-vnoremap(">", ">gv")
+vim.keymap.set('v',"<", "<gv")
+vim.keymap.set('v',">", ">gv")
 
-vnoremap("J", ":m '>+1<CR>gv")
-vnoremap("K", ":m '<-2<CR>gv")
+-- Move lines
+vim.keymap.set('v',"J", ":m '>+1<CR>gv")
+vim.keymap.set('v',"K", ":m '<-2<CR>gv")
 
 -- Vim S(z)urround
 vim.cmd[[

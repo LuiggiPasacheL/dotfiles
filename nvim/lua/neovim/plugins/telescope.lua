@@ -13,12 +13,5 @@ telescope.setup({
                 ["<C-k>"] = actions.move_selection_previous,
             },
         },
-        -- mappings = {
-        --     i = {
-        --         ["<esc>"] = actions.close,
-        --         ["<C-j>"] = actions.move_selection_next,
-        --         ["<C-k>"] = actions.move_selection_previous,
-        --     },
-        -- }
     }
 })
