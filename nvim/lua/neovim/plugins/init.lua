@@ -1,5 +1,5 @@
 
-require('neovim.plugins.nvimtree')
+require('neovim.plugins.nvim_tree')
 
 require('neovim.plugins.telescope')
 

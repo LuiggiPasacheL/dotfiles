@@ -1,4 +1,4 @@
 
 require('nvim-ts-autotag').setup({
-    filetypes = {"html", "xml", "htmldjango"},
+    filetypes = { 'html', 'xml', 'htmldjango', 'typescriptreact', 'javascriptreact'},
 })

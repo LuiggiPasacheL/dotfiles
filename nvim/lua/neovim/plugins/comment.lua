@@ -7,9 +7,5 @@ ft
 .set('yaml', '#%s')
 .set('javascript', {'//%s', '/*%s*/'})
 .set('json', {'//%s'})
-
-ft.javascript = {'//%s', '/*%s*/'}
-ft.yaml = '#%s'
-
-ft({'go', 'rust'}, {'//%s', '/*%s*/'})
-ft({'toml', 'graphql'}, '#%s')
+.set({'toml', 'graphql'}, '#%s')
+.set({'go', 'rust'}, {'//%s', '/*%s*/'})

@@ -1,15 +1,12 @@
 
-local opt = vim.opt
-local g = vim.g
+vim.opt.nu = true
+vim.opt.relativenumber = true
 
-opt.nu = true
-opt.relativenumber = true
+vim.opt.mouse = 'a'
 
-opt.mouse = 'a'
-
-g.tokyonight_transparent_sidebar = true
-g.tokyonight_transparent = true
-opt.background = "dark"
+vim.g.tokyonight_transparent_sidebar = true
+vim.g.tokyonight_transparent = true
+vim.opt.background = "dark"
 
 vim.cmd.colorscheme("tokyonight")
 
