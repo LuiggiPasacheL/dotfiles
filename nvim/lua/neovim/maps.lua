@@ -5,6 +5,7 @@ vim.keymap.set('n',"<leader>q", ":q<CR>")
 
 -- NvimTree
 vim.keymap.set('n','<C-A-e>', ':NvimTreeToggle<CR>')
+vim.keymap.set('n','<leader>e', ':NvimTreeToggle<CR>')
 
 -- Git
 vim.keymap.set('n','<leader>g', '<cmd>G<CR>')
