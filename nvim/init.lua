@@ -1,13 +1,12 @@
-
 require('plugins')
 
 -- NOTE: Settings
 -- Common
-require('common')
+require('configs.common')
 if vim.g.vscode then
     -- VSCode
-    require('vscode')
+    require('configs.vscode')
 else
     -- Ordinary Neovim
-    require('neovim')
+    require('configs.neovim')
 end
