@@ -1,5 +1,5 @@
-local nocode = function()
-    return not vim.g.vscode
+local cond = function()
+    return vim.g.vscode == 1 -- True if vscode is active
 end
 
 return require('packer').startup(function(use)
@@ -19,36 +19,36 @@ return require('packer').startup(function(use)
     use {
         "nvim-treesitter/nvim-treesitter",
         { run = ":TSUpdate" },
-        disable = nocode()
+        disable = cond()
     } -- Treesitter
 
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.0',
         requires = { 'nvim-lua/plenary.nvim' },
-        disable = nocode()
+        disable = cond()
     } -- Telescope
 
     use {
         'nvim-tree/nvim-tree.lua',
         requires = { 'nvim-tree/nvim-web-devicons' },
         tag = 'nightly',
-        disable = nocode()
+        disable = cond()
     } -- Files explorer
 
-    use { 'neovim/nvim-lspconfig', disable = nocode() }
-    use { 'williamboman/mason.nvim', disable = nocode() }
-    use { 'williamboman/mason-lspconfig.nvim', disable = nocode() }
-    use { 'hrsh7th/cmp-nvim-lsp', disable = nocode() }
-    use { 'hrsh7th/cmp-buffer', disable = nocode() }
-    use { 'hrsh7th/nvim-cmp', disable = nocode() }
-    use { 'hrsh7th/cmp-vsnip', disable = nocode() }
-    use { 'hrsh7th/vim-vsnip', disable = nocode() }
-    use { 'windwp/nvim-ts-autotag', disable = nocode() }
-    use { 'nvim-lualine/lualine.nvim', disable = nocode() }
-    use { 'folke/todo-comments.nvim', disable = nocode() }
-    use { 'tpope/vim-fugitive', disable = nocode() }
-    use { 'windwp/nvim-autopairs', disable = nocode() }
-    use { 'numToStr/Comment.nvim', disable = nocode() }
-    use { 'folke/tokyonight.nvim', disable = nocode() }
+    use { 'neovim/nvim-lspconfig', disable = cond() }
+    use { 'williamboman/mason.nvim', disable = cond() }
+    use { 'williamboman/mason-lspconfig.nvim', disable = cond() }
+    use { 'hrsh7th/cmp-nvim-lsp', disable = cond() }
+    use { 'hrsh7th/cmp-buffer', disable = cond() }
+    use { 'hrsh7th/nvim-cmp', disable = cond() }
+    use { 'hrsh7th/cmp-vsnip', disable = cond() }
+    use { 'hrsh7th/vim-vsnip', disable = cond() }
+    use { 'windwp/nvim-ts-autotag', disable = cond() }
+    use { 'nvim-lualine/lualine.nvim', disable = cond() }
+    use { 'folke/todo-comments.nvim', disable = cond() }
+    use { 'tpope/vim-fugitive', disable = cond() }
+    use { 'windwp/nvim-autopairs', disable = cond() }
+    use { 'numToStr/Comment.nvim', disable = cond() }
+    use { 'folke/tokyonight.nvim', disable = cond() }
 
 end)
