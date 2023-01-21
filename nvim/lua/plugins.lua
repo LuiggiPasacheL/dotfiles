@@ -1,63 +1,52 @@
+local vscode = vim.g.vscode == 1
+
 return require('packer').startup(function(use)
 
     use 'wbthomason/packer.nvim' -- Packer
 
-    -- NOTE: Vscode and neovim  
-
+    -- TODO: Replace for " use 'tpope/vim-surround' "
     use 'machakann/vim-sandwich' -- S(z)urround
 
     use 'bkad/CamelCaseMotion' -- CamelCaseMotion
 
-    -- NOTE:Only neovim plugins
+    -- TODO: Research this plugins for vscode
+    -- use 'rhysd/clever-f.vim'
+    -- use 'tomtom/tcomment_vim'
+    -- use 'phaazon/hop.nvim'
 
-    if not vim.g.vscode then
+    use {
+        "nvim-treesitter/nvim-treesitter",
+        { run = ":TSUpdate" },
+        disable = vscode
+    } -- Treesitter
 
-        use {
-            'neovim/nvim-lspconfig',
-            'williamboman/mason.nvim',
-            'williamboman/mason-lspconfig.nvim',
-        } -- LSP
+    use {
+        'nvim-telescope/telescope.nvim', tag = '0.1.0',
+        requires = { 'nvim-lua/plenary.nvim' },
+        disable = vscode
+    } -- Telescope
 
-        use {
-            'hrsh7th/cmp-nvim-lsp',
-            'hrsh7th/cmp-buffer',
-            'hrsh7th/nvim-cmp',
-            'hrsh7th/cmp-vsnip',
-            'hrsh7th/vim-vsnip'
-        } -- CMP
+    use {
+        'nvim-tree/nvim-tree.lua',
+        requires = { 'nvim-tree/nvim-web-devicons' },
+        tag = 'nightly',
+        disable = vscode
+    } -- Files explorer
 
-        use("nvim-treesitter/nvim-treesitter", {
-            run = ":TSUpdate"
-        }) -- Treesitter
-
-        use 'windwp/nvim-ts-autotag' --html autotag
-
-        use 'nvim-lualine/lualine.nvim' -- Statusline
-
-        use {
-            'nvim-telescope/telescope.nvim', tag = '0.1.0',
-            requires = { 'nvim-lua/plenary.nvim' }
-        } -- Telescope
-
-        use 'folke/todo-comments.nvim' -- Todo
-
-        use {
-            'nvim-tree/nvim-tree.lua',
-            requires = {
-                'nvim-tree/nvim-web-devicons',
-            },
-            tag = 'nightly'
-        } -- Files explorer
-
-        use 'tpope/vim-fugitive' -- Git integration
-
-        use 'windwp/nvim-autopairs' -- Autopairs
-
-        use 'numToStr/Comment.nvim' -- Comments with "gcc"
-
-        use 'folke/tokyonight.nvim' -- Colorscheme
-
-    end
+    use { 'neovim/nvim-lspconfig', disable = vscode }
+    use { 'williamboman/mason.nvim', disable = vscode }
+    use { 'williamboman/mason-lspconfig.nvim', disable = vscode }
+    use { 'hrsh7th/cmp-nvim-lsp', disable = vscode }
+    use { 'hrsh7th/cmp-buffer', disable = vscode }
+    use { 'hrsh7th/nvim-cmp', disable = vscode }
+    use { 'hrsh7th/cmp-vsnip', disable = vscode }
+    use { 'hrsh7th/vim-vsnip', disable = vscode } -- CMP
+    use { 'windwp/nvim-ts-autotag', disable = vscode } --html autotag
+    use { 'nvim-lualine/lualine.nvim', disable = vscode } -- Statusline
+    use { 'folke/todo-comments.nvim', disable = vscode } -- Todo
+    use { 'tpope/vim-fugitive', disable = vscode } -- Git integration
+    use { 'windwp/nvim-autopairs', disable = vscode } -- Autopairs
+    use { 'numToStr/Comment.nvim', disable = vscode } -- Comments with "gcc"
+    use { 'folke/tokyonight.nvim', disable = vscode } -- Colorscheme
 
 end)
-
