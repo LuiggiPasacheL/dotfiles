@@ -9,6 +9,3 @@ vim.g.tokyonight_transparent = true
 vim.opt.background = "dark"
 
 vim.cmd.colorscheme("tokyonight")
-
-vim.g.mapleader = " "
-vim.g.camelcasemotion_key = ','

@@ -11,5 +11,3 @@ vim.opt.wrap = false
 vim.g.sandwich_no_default_key_mappings = 1 -- disable s for surround and using z
 vim.g.operator_sandwich_no_default_key_mappings = 1
 
-vim.g.mapleader = " "
-vim.g.camelcasemotion_key = ','

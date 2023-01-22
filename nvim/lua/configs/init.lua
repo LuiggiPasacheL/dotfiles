@@ -1,5 +1,6 @@
 -- Common
-require('configs.common')
+require('configs.settings')
+require('configs.maps')
 
 if vim.g.vscode then
     -- VSCode
