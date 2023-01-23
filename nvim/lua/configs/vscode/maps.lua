@@ -10,8 +10,8 @@ vim.keymap.set('n','<leader>q', "<CMD>call VSCodeNotify('workbench.action.closeA
 vim.keymap.set('n','<leader>w', "<CMD>call VSCodeNotify('workbench.action.files.save')<CR>")
 
 -- File explorer
-vim.keymap.set('n','<C-A-e>', "<CMD>call VSCodeNotify('workbench.explorer.fileView.focus')")
-vim.keymap.set('n','<leader>e', "<CMD>call VSCodeNotify('workbench.explorer.fileView.focus')")
+vim.keymap.set('n','<C-A-e>', "<CMD>call VSCodeNotify('workbench.explorer.fileView.focus')<CR>")
+vim.keymap.set('n','<leader>e', "<CMD>call VSCodeNotify('workbench.explorer.fileView.focus')<CR>")
 
 -- Git
 vim.keymap.set('n','<leader>g', "<CMD>call VSCodeNotify('magit.status')<CR>")
