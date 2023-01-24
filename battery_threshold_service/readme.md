@@ -1,8 +1,12 @@
-Para hacer persistente el limite de bateria al 80%
 
-- Como super usuario
+# Battery charge threshold at 80%
 
-- Pegar ```battery-charge-threshold.service``` en ```/etc/systemd/system```
+Paste ```battery-charge-threshold.service``` in ```/etc/systemd/system```
+```sh
+sudo cp battery-charge-threshold.service /etc/systemd/system
+```
 
-- Luego activar ```systemctl enable battery-charge-threshold.service```
-
+And execute ```systemctl enable battery-charge-threshold.service```
+```sh
+sudo systemctl enable battery-charge-threshold.service
+```
