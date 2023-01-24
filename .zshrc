@@ -40,6 +40,7 @@ antigen bundle git
 antigen bundle pip
 antigen bundle django
 antigen bundle command-not-found
+antigen bundle git-auto-fetch
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle zsh-users/zsh-autosuggestions
 
