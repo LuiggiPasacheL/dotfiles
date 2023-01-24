@@ -29,14 +29,23 @@ then
 fi
 export PATH
 
-
 # Plugins
-
 eval "$(starship init zsh)"
 
-source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
-source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /home/luiggi/.config/antigen.zsh
+
+antigen use oh-my-zsh
+
+antigen bundle git
+antigen bundle pip
+antigen bundle django
+antigen bundle command-not-found
+antigen bundle zsh-users/zsh-syntax-highlighting
+antigen bundle zsh-users/zsh-autosuggestions
+
+antigen apply
 
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=white'
 
+# Alias
 alias vi="nvim ."

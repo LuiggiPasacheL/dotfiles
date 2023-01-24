@@ -6,20 +6,9 @@ Clone into your home directory
 git clone https://github.com/LuiggiPasacheL/dotfiles ~/.dotfiles
 ```
 
-Backup old dir config (if exists)
+Install antigen
 ```sh
-cd ~
-mv .zshrc .zshrc.bak
-cd ~/.config
-mv nvim nvim.bak
-# mv fish fish.bak # Uncomment for use fish
-mv starship.toml starship.toml.bak
-```
-
-Clone zsh plugins
-```sh
-git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.zsh/zsh-syntax-highlighting
+curl -L git.io/antigen > ~/.config/antigen.zsh
 ```
 
 Install starship
@@ -44,7 +33,6 @@ cd ~
 ln -s ~/.dotfiles/.zshrc
 cd ~/.config
 ln -s ~/.dotfiles/nvim
-# ln -s ~/.dotfiles/fish # Uncomment for use fish
 ln -s ~/.dotfiles/starship.toml
 ```
 
