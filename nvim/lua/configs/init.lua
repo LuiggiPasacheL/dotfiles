@@ -1,6 +1,7 @@
--- Common
-require('configs.settings')
+
 require('configs.packer')
+
+require('configs.settings')
 require('configs.maps')
 
 if vim.g.vscode then
