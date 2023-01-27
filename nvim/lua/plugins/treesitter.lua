@@ -20,5 +20,6 @@ return {
                 additional_vim_regex_highlighting = false,
             },
         }
-    end
+    end,
+    cond = vim.g.vscode == 1
 }
