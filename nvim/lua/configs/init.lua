@@ -1,6 +1,4 @@
 
-require('configs.packer')
-
 require('configs.settings')
 require('configs.maps')
 
