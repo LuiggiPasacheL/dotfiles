@@ -4,6 +4,7 @@ node_modules
 
 # nvim
 nvim/plugin/*
+nvim/lazy-lock.json
 
 # Fish
 fishd.*
