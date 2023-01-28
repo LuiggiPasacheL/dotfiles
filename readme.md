@@ -17,11 +17,6 @@ curl -sS https://starship.rs/install.sh | sh
 ```
 
 Install neovim requirements
-> Packer
-```sh
-git clone --depth 1 https://github.com/wbthomason/packer.nvim\
- ~/.local/share/nvim/site/pack/packer/start/packer.nvim 
-```
 > g++ 
 ```sh
 sudo dnf install g++ # Or according your distro
