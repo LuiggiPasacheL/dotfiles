@@ -49,7 +49,7 @@ return {
 
             vim.keymap.set('n', '<C-.>', vim.lsp.buf.code_action, opts)
 
-            vim.keymap.set('n', '<leader>f', function() vim.lsp.buf.formatting { async = true } end, opts)
+            vim.keymap.set('n', '<leader>f', function() vim.lsp.buf.format { async = true } end, opts)
             vim.keymap.set('n', '<leader>n', vim.diagnostic.goto_next, opts)
             vim.keymap.set('n', '<leader>p', vim.diagnostic.goto_prev, opts)
             vim.keymap.set('n', '<leader>wa', vim.lsp.buf.add_workspace_folder, opts)
