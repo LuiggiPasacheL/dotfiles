@@ -19,5 +19,6 @@ return {
                 },
             }
         })
-    end
+    end,
+    cond = Not_vscode()
 }

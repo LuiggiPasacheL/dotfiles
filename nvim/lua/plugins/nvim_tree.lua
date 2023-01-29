@@ -14,5 +14,6 @@ return {
                 "<C-k>"
             }
         })
-    end
+    end,
+    cond = Not_vscode()
 }

@@ -21,4 +21,5 @@ return {
             },
         }
     end,
+    cond = Not_vscode()
 }

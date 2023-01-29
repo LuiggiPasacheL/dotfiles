@@ -78,4 +78,5 @@ return {
 
         lsp.setup()
     end,
+    cond = Not_vscode()
 }

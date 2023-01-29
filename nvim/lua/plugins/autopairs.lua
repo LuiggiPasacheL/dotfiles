@@ -3,4 +3,5 @@ return {
     config = function ()
         require("nvim-autopairs").setup({})
     end,
+    cond = Not_vscode()
 }

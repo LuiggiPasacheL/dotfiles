@@ -1,3 +1,7 @@
+Not_vscode = function ()
+    return vim.g.vscode == nil
+end
+
 require('configs')
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
