@@ -35,6 +35,7 @@ ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 bindkey -v
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
+bindkey '^I' expand-or-complete
 
 antigen apply
 
