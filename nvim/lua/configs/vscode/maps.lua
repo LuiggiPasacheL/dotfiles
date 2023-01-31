@@ -5,6 +5,12 @@ vim.keymap.set('n','<C-k>', "<CMD>call VSCodeNotify('workbench.action.navigateUp
 vim.keymap.set('n','<C-h>', "<CMD>call VSCodeNotify('workbench.action.navigateLeft')<CR>")
 vim.keymap.set('n','<C-l>', "<CMD>call VSCodeNotify('workbench.action.navigateRight')<CR>")
 
+-- Move editors
+vim.keymap.set('n','<C-S-j>', "<CMD>call VSCodeNotify('workbench.action.moveEditorToBelowGroup')<CR>")
+vim.keymap.set('n','<C-S-k>', "<CMD>call VSCodeNotify('workbench.action.moveEditorToAboveGroup')<CR>")
+vim.keymap.set('n','<C-S-h>', "<CMD>call VSCodeNotify('workbench.action.moveEditorToLeftGroup')<CR>")
+vim.keymap.set('n','<C-S-l>', "<CMD>call VSCodeNotify('workbench.action.moveEditorToRightGroup')<CR>")
+
 -- Save and exit files
 vim.keymap.set('n','<leader>q', "<CMD>call VSCodeNotify('workbench.action.closeActiveEditor')<CR>")
 vim.keymap.set('n','<leader>w', "<CMD>call VSCodeNotify('workbench.action.files.save')<CR>")
