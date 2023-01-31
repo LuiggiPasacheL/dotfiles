@@ -1,5 +1,5 @@
 return {
-    'folke/todo-comments.nvim',
+    'numToStr/Comment.nvim',
     config = function()
         require('Comment').setup()
 

@@ -42,4 +42,5 @@ return {
             extensions = {}
         })
     end,
+    cond = Not_vscode()
 }

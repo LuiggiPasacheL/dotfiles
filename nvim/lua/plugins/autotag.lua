@@ -6,4 +6,5 @@ return {
             filetypes = { 'html', 'xml', 'htmldjango', 'typescriptreact', 'javascriptreact'},
         })
     end,
+    cond = Not_vscode()
 }

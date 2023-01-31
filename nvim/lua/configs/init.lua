@@ -2,10 +2,10 @@
 require('configs.settings')
 require('configs.maps')
 
-if vim.g.vscode then
-    -- VSCode
-    require('configs.vscode')
-else
+if Not_vscode() then
     -- Ordinary Neovim
     require('configs.neovim')
+else
+    -- VSCode
+    require('configs.vscode')
 end

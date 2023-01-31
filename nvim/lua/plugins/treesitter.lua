@@ -21,5 +21,5 @@ return {
             },
         }
     end,
-    cond = vim.g.vscode == 1
+    cond = Not_vscode()
 }

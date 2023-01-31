@@ -7,5 +7,6 @@ return {
             -- scoop install ripgrep
             -- dnf install ripgrep
         }
-    end
+    end,
+    cond = Not_vscode()
 }
