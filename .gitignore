@@ -6,14 +6,3 @@ node_modules
 nvim/plugin/*
 nvim/lazy-lock.json
 
-# Fish
-fishd.*
-fish/config.fish.backup
-fish/fish_history
-fish/fish_variables
-fish/completions
-fish/fish_plugins
-fish/conf.d
-fish/functions/nvm*
-fish/functions/_nvm*
-fish/themes
