@@ -1,6 +1,21 @@
 
+# Plugins
+source $HOME/.config/antigen.zsh
+
+antigen use oh-my-zsh
+
+antigen bundle git
+antigen bundle command-not-found
+antigen bundle zsh-users/zsh-syntax-highlighting
+antigen bundle zsh-users/zsh-autosuggestions
+antigen bundle zsh-completions
+antigen bundle zsh-history-substring-search
+
+antigen apply
+
+# Prompt
 eval "$(starship init zsh)"
-#
+
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
 HISTSIZE=100000
@@ -14,6 +29,8 @@ bindkey  "^[[F"   end-of-line
 bindkey  "^[[3~"  delete-char
 bindkey "^[[1;5D" backward-word
 bindkey "^[[1;5C" forward-word
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
 
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
@@ -31,3 +48,4 @@ fi
 export PATH
 
 export PATH=/usr/pgsql-11/bin/:$PATH
+
