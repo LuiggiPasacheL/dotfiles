@@ -12,4 +12,5 @@ return {
             .set({ 'toml', 'graphql' }, '#%s')
             .set({ 'go', 'rust' }, { '//%s', '/*%s*/' })
     end,
+    cond = Not_vscode()
 }

@@ -45,8 +45,6 @@ vim.keymap.set('x', 'gc', '<Plug>VSCodeCommentary')
 vim.keymap.set('n', 'gc', '<Plug>VSCodeCommentary')
 vim.keymap.set('o', 'gc', '<Plug>VSCodeCommentary')
 vim.keymap.set('n', 'gcc', '<Plug>VSCodeCommentaryLine')
--- vim.keymap.set('n','gcc', "<CMD>call VSCodeNotifyRange('editor.action.commentLine', getline('.'), getline('.') + v:count1, 1)<CR>")
--- vim.keymap.set('x','gcc', "<CMD>call VSCodeNotifyVisual('editor.action.commentLine', 1)<CR>")
 
 -- Secondary bar
 vim.keymap.set('n','<leader>t', "<CMD>call VSCodeNotify('todo-tree-view.focus')<CR>")
