@@ -49,3 +49,5 @@ export PATH
 
 export PATH=/usr/pgsql-11/bin/:$PATH
 
+# aliases
+alias v="nvim ."
