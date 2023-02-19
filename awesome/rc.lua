@@ -8,6 +8,7 @@ local awful = require("awful")
 require("awful.autofocus")
 -- Widget and layout library
 local wibox = require("wibox")
+
 -- Theme handling library
 local beautiful = require("beautiful")
 -- Notification library
@@ -17,6 +18,13 @@ local hotkeys_popup = require("awful.hotkeys_popup")
 -- Enable hotkeys help widget for VIM and other apps
 -- when client with a matching name is opened:
 require("awful.hotkeys_popup.keys")
+-- Widgets
+local battery_widget = require("awesome-wm-widgets.battery-widget.battery")
+local brightness_widget = require("awesome-wm-widgets.brightness-widget.brightness")
+local calendar_widget = require("awesome-wm-widgets.calendar-widget.calendar")
+local volume_widget = require('awesome-wm-widgets.volume-widget.volume')
+local logout_menu_widget = require("awesome-wm-widgets.logout-menu-widget.logout-menu")
+local net_speed_widget = require("awesome-wm-widgets.net-speed-widget.net-speed")
 
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
@@ -61,11 +69,12 @@ editor_cmd = terminal .. " -e " .. editor
 -- I suggest you to remap Mod4 to another key using xmodmap or other tools.
 -- However, you can use another modifier like Mod1, but it may interact with others.
 modkey = "Mod4"
+altkey = "Mod1"
 
 -- Table of layouts to cover with awful.layout.inc, order matters.
-awful.layout.layouts = {
-    awful.layout.suit.floating,
-    awful.layout.suit.tile,
+-- awful.layout.layouts = {
+    -- awful.layout.suit.floating,
+    -- awful.layout.suit.tile,
     -- awful.layout.suit.tile.left,
     -- awful.layout.suit.tile.bottom,
     -- awful.layout.suit.tile.top,
@@ -80,10 +89,17 @@ awful.layout.layouts = {
     -- awful.layout.suit.corner.ne,
     -- awful.layout.suit.corner.sw,
     -- awful.layout.suit.corner.se,
-}
+-- }
 -- }}}
 
--- {{{ Menu
+-- My order layout
+awful.layout.layouts = {
+    awful.layout.suit.tile,
+    awful.layout.suit.floating,
+    awful.layout.suit.fair,
+}
+
+
 -- Create a launcher widget and a main menu
 myawesomemenu = {
     { "hotkeys", function() hotkeys_popup.show_help(nil, awful.screen.focused()) end },
@@ -93,13 +109,19 @@ myawesomemenu = {
     { "quit", function() awesome.quit() end },
 }
 
-mymainmenu = awful.menu({ items = { { "awesome", myawesomemenu, beautiful.awesome_icon },
-    { "open terminal", terminal }
-}
+
+mymainmenu = awful.menu({
+    items = {
+        { "awesome", myawesomemenu, beautiful.awesome_icon },
+        { "run", function() menubar.show() end },
+        { "open terminal", terminal }
+    }
 })
 
-mylauncher = awful.widget.launcher({ image = beautiful.awesome_icon,
-    menu = mymainmenu })
+mylauncher = awful.widget.launcher({
+    image = beautiful.awesome_icon,
+    menu = mymainmenu
+})
 
 -- Menubar configuration
 menubar.utils.terminal = terminal -- Set the terminal for applications that require it
@@ -111,6 +133,19 @@ mykeyboardlayout = awful.widget.keyboardlayout()
 -- {{{ Wibar
 -- Create a textclock widget
 mytextclock = wibox.widget.textclock()
+local cw = calendar_widget({
+    theme = 'nord',
+    placement = 'top_right',
+    start_sunday = true,
+    radius = 8,
+    -- with customized next/previous (see table above)
+    previous_month_button = 1,
+    next_month_button = 3,
+})
+mytextclock:connect_signal("button::press",
+    function(_, _, _, button)
+        if button == 1 then cw.toggle() end
+    end)
 
 -- Create a wibox for each screen and add it
 local taglist_buttons = gears.table.join(
@@ -195,28 +230,53 @@ awful.screen.connect_for_each_screen(function(s)
     s.mytasklist = awful.widget.tasklist {
         screen  = s,
         filter  = awful.widget.tasklist.filter.currenttags,
-        buttons = tasklist_buttons
+        buttons = tasklist_buttons,
     }
 
+    -- My widgets
+    myemptyseparatorwidget = wibox.widget.textbox("   ")
+    mybattwidget = battery_widget()
+    mybrightnesswidget = brightness_widget()
+    myvolumewidget = volume_widget {
+        widget_type = 'arc'
+    }
+    mylogoutwidget = logout_menu_widget()
+    mynetwidget = net_speed_widget()
+
     -- Create the wibox
-    s.mywibox = awful.wibar({ position = "top", screen = s })
+    s.mywibox = awful.wibar({
+        position = "top",
+        height = 30,
+        screen = s,
+        border_width = 10,
+        shape = function(cr,w,h) gears.shape.rounded_rect(cr,w,h, 20) end,
+    })
 
     -- Add widgets to the wibox
+    -- s.mywibox:setup {
     s.mywibox:setup {
         layout = wibox.layout.align.horizontal,
         { -- Left widgets
             layout = wibox.layout.fixed.horizontal,
+            myemptyseparatorwidget,
             mylauncher,
+            myemptyseparatorwidget,
             s.mytaglist,
             s.mypromptbox,
         },
         s.mytasklist, -- Middle widget
         { -- Right widgets
             layout = wibox.layout.fixed.horizontal,
-            mykeyboardlayout,
+            mynetwidget,
+            -- mykeyboardlayout,
             wibox.widget.systray(),
             mytextclock,
+            mybattwidget,
+            mybrightnesswidget,
+            myvolumewidget,
             s.mylayoutbox,
+            mylogoutwidget,
+            myemptyseparatorwidget,
         },
     }
 end)
@@ -270,6 +330,23 @@ globalkeys = gears.table.join(
         { description = "focus the previous screen", group = "screen" }),
     awful.key({ modkey, }, "u", awful.client.urgent.jumpto,
         { description = "jump to urgent client", group = "client" }),
+    awful.key({ altkey, }, "Tab",
+        function()
+            -- awful.client.focus.history.previous()
+            awful.client.focus.byidx(-1)
+            if client.focus then
+                client.focus:raise()
+            end
+        end),
+
+    awful.key({ altkey, "Shift" }, "Tab",
+        function()
+            -- awful.client.focus.history.previous()
+            awful.client.focus.byidx(1)
+            if client.focus then
+                client.focus:raise()
+            end
+        end),
     awful.key({ modkey, }, "Tab",
         function()
             awful.client.focus.history.previous()
@@ -342,6 +419,8 @@ clientkeys = gears.table.join(
             c:raise()
         end,
         { description = "toggle fullscreen", group = "client" }),
+    awful.key({ altkey, }, "F4", function (c) c:kill() end,
+        { description = "close", group = "client" }),
     awful.key({ modkey, "Shift" }, "c", function(c) c:kill() end,
         { description = "close", group = "client" }),
     awful.key({ modkey, "Control" }, "space", awful.client.floating.toggle,
@@ -519,6 +598,10 @@ client.connect_signal("manage", function(c)
         -- Prevent clients from being unreachable after screen count changes.
         awful.placement.no_offscreen(c)
     end
+end)
+
+client.connect_signal("manage", function(c)
+    c.shape = gears.shape.rounded_rect
 end)
 
 -- Add a titlebar if titlebars_enabled is set to true in the rules.
