@@ -2,7 +2,7 @@ Not_vscode = function ()
     return vim.g.vscode == nil
 end
 
-require('configs')
+vim.g.mapleader = " "
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
@@ -18,3 +18,5 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup("plugins")
+
+require('configs')
