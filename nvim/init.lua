@@ -3,6 +3,7 @@ Not_vscode = function ()
 end
 
 vim.g.mapleader = " "
+vim.g.camelcasemotion_key = ','
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
