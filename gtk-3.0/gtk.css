@@ -3,6 +3,46 @@ color: transparent;
 background-color: transparent;
 }
 
+button {
+background-color: #272727;
+color: #ffffff;
+margin-top: 4px;
+margin-bottom: 4px;
+margin-left: 4px;
+margin-right: 4px;
+padding: 10px;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;
+}
+
+button:checked {
+color: #ffffff;
+margin-top: 2px;
+margin-bottom: 2px;
+margin-left: 2px;
+margin-right: 2px;
+padding: 10px;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;
+}
+
+button:hover {
+color: #ffffff;
+margin-top: 2px;
+margin-bottom: 2px;
+margin-left: 2px;
+margin-right: 2px;
+padding: 10px;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;
+}
+
 #whiskermenu-button {
 background-color: #272727;
 color: #ffffff;
@@ -291,6 +331,20 @@ border-bottom-left-radius: 10px;
 border-bottom-right-radius: 10px;
 }
 
+#xfce4-time-out-plugin-16 {
+background-color: #272727;
+color: #ffffff;
+margin-top: 4px;
+margin-bottom: 4px;
+margin-left: 4px;
+margin-right: 4px;
+padding: 10px;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;
+}
+
 .xfce4-panel .tasklist .toggle {
 background-color: #ffffff;
 color: white;
@@ -337,3 +391,4 @@ border-top-right-radius: 10px;
 border-bottom-left-radius: 10px;
 border-bottom-right-radius: 10px;
 }
+
