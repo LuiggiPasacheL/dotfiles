@@ -6,20 +6,18 @@ Clone into your home directory
 git clone https://github.com/LuiggiPasacheL/dotfiles ~/.dotfiles
 ```
 
-Install starship
+Install starship, tpm and antigen
 ```sh
 curl -sS https://starship.rs/install.sh | sh
-```
-
-Install antigen
-```sh
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 curl -L git.io/antigen > ~/.config/antigen.zsh
 ```
 
-Install neovim requirements
-> g++ 
+Install requirements
+> g++ and npm 
 ```sh
 sudo dnf install g++
+sudo dnf install nodejs
 ```
 
 Copy configuration dir config
