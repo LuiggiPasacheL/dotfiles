@@ -20,7 +20,8 @@ return {
 
         local function open_nvim_tree(data)
             -- buffer is a [No Name]
-            local no_name = data.file == "" and vim.bo[data.buf].buftype == ""
+            -- local no_name = data.file == "" and vim.bo[data.buf].buftype == ""
+            local no_name = data.file == "[No Name]"
 
             -- buffer is a directory
             local directory = vim.fn.isdirectory(data.file) == 1
@@ -39,6 +40,5 @@ return {
         end
 
         vim.api.nvim_create_autocmd({ "VimEnter" }, { callback = open_nvim_tree })
-    end,
-    cond = Not_vscode()
+    end, cond = Not_vscode()
 }
