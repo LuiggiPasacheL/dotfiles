@@ -26,6 +26,7 @@ Copy configuration dir config
 ```sh
 cd ~
 ln -s ~/.dotfiles/.zshrc
+ln -s ~/.dotfiles/.tmux.conf
 cd ~/.config
 ln -s ~/.dotfiles/nvim
 cp ~/.dotfiles/starship.toml starship.toml
