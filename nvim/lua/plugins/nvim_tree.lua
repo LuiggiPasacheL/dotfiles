@@ -9,7 +9,6 @@ return {
         require("nvim-tree").setup({
             auto_reload_on_write = true,
             -- open_on_setup = true,
-            disable_netrw = true,
             view = {
                 adaptive_size = true,
             },
