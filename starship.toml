@@ -17,7 +17,6 @@ format = 'on [Asus  ](bold green)'
 trim_at = "."
 disabled = false
 
-# Replace the "❯" symbol in the prompt with "➜"
 [character]                            # The name of the module we are configuring is "character"
 success_symbol = "[❯ ](bold green)"     # The "success_symbol" segment is being set to "➜" with the color "bold green"
 error_symbol = "[✗ ](bold red)"
@@ -27,13 +26,13 @@ error_symbol = "[✗ ](bold red)"
 read_only = " "
 truncation_length = 10
 truncate_to_repo = true # truncates directory to root folder if in github repo
-style = "bold italic blue"
+style = "bold blue"
 
 [cmd_duration]
 min_time = 4
 show_milliseconds = false
 disabled = false
-style = "bold italic red"
+style = "bold red"
 
 [aws]
 symbol = "  "
@@ -43,9 +42,6 @@ symbol = " "
 
 [dart]
 symbol = " "
-
-#[directory]
-#read_only = " "
 
 [docker_context]
 symbol = " "
@@ -100,7 +96,7 @@ symbol = " "
 
 [python]
 symbol = " "
-#pyenv_version_name = true
+pyenv_version_name = true
 format = 'via [${symbol}python (${version} )(\($virtualenv\) )]($style)'
 style = "bold yellow"
 pyenv_prefix = "venv "
