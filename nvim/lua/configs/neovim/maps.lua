@@ -17,8 +17,10 @@ vim.keymap.set('n','<leader>e', '<CMD>NvimTreeFocus<CR>')
 vim.keymap.set('n','<leader>g', '<CMD>G<CR>')
 
 -- Telescope
-vim.keymap.set('n','<C-p>', '<CMD>Telescope find_files<cr>')
+vim.keymap.set('n','<C-p>', '<CMD>Telescope git_files<cr>')
+vim.keymap.set('n','<leader>pf', '<CMD>Telescope find_files<cr>')
 vim.keymap.set('n','<leader>b', '<CMD>Telescope buffers<cr>')
 vim.keymap.set('n','<C-s>', '<CMD>Telescope tresitter<cr>')
 vim.keymap.set('n','<C-f>', '<CMD>Telescope live_grep<cr>')
-vim.keymap.set('n','<leader>tt', '<CMD>Telescope ')
+vim.keymap.set('n','<leader>tt', ':Telescope ')
+
