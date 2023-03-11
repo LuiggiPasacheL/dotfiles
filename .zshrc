@@ -10,6 +10,7 @@ antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle zsh-completions
 antigen bundle zsh-history-substring-search
+antigen bundle lukechilds/zsh-nvm # nvm auto install
 
 antigen apply
 
@@ -46,7 +47,6 @@ then
     PATH="$HOME/.local/bin:$HOME/bin:$PATH"
 fi
 export PATH
-
 export PATH=/usr/pgsql-11/bin/:$PATH
 
 export EDITOR="nvim"
@@ -55,5 +55,4 @@ export EDITOR="nvim"
 alias v="nvim ."
 
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+export NVM_COMPLETION=true
