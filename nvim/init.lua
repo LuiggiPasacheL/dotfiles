@@ -2,13 +2,7 @@ Not_vscode = function ()
     return vim.g.vscode == nil
 end
 
-vim.g.mapleader = " "
-vim.g.camelcasemotion_key = ','
-vim.g.sandwich_no_default_key_mappings = 1 -- disable s for surround and using z
-vim.g.operator_sandwich_no_default_key_mappings = 1
-vim.g.Guifont = "JetBrainsMono , 'Hack Nerd Font Mono', Consolas, 'Courier New', monospace"
-vim.g.tokyonight_transparent_sidebar = true
-vim.g.tokyonight_transparent = true
+require('configs.global')
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
@@ -25,4 +19,10 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup("plugins")
 
-require('configs')
+if Not_vscode() then
+    -- Ordinary Neovim
+    require('configs.neovim')
+else
+    -- VSCode
+    require('configs.vscode')
+end
