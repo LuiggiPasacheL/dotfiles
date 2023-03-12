@@ -1,9 +1,9 @@
-.xfce4-pane1 {
+.xfce4-panel {
 color: transparent;
 background-color: transparent;
 }
 
-.xfce4-pane1 button,
+.xfce4-panel button,
 .xfce4-panel .flat {
 background-color: #272727;
 color: #ffffff;
@@ -18,7 +18,7 @@ border-bottom-left-radius : 1px;
 border-bottom-right-radius: 10px;
 }
 
-.xfce4-pane1 button:checked,
+.xfce4-panel button:checked,
 .xfce4-panel .flat:checked {
 margin-top: 1px;
 margin-bottom: 1px;
@@ -28,5 +28,8 @@ margin-right: 4px;
 
 /* Systray: xfce4-statusnotifier-plugin */
 #sn-button { 
-padding: Opx 10px;
+padding-top: 0px;
+padding-bottom: 0px;
+padding-left: 10px;
+padding-right: 10px;
 }
