@@ -1,4 +1,10 @@
 
+-- Copy to clipboard
+vim.keymap.set('x','<leader>y',  "<CMD>call VSCodeCallVisual('editor.action.clipboardCopyAction', 1)<CR>")
+vim.keymap.set('n','<leader>Y',  "<CMD>call VSCodeCallVisual('editor.action.clipboardCopyAction', 1)<CR>")
+vim.keymap.set('n','<leader>y',  "<CMD>call VSCodeCallVisual('editor.action.clipboardCopyAction', 1)<CR>")
+vim.keymap.set('n','<leader>yy', "<CMD>call VSCodeCallVisual('editor.action.clipboardCopyAction', 1)<CR>")
+
 -- Navigation
 vim.keymap.set('n','<C-j>', "<CMD>call VSCodeNotify('workbench.action.navigateDown')<CR>")
 vim.keymap.set('n','<C-k>', "<CMD>call VSCodeNotify('workbench.action.navigateUp')<CR>")
@@ -8,7 +14,7 @@ vim.keymap.set('n','<C-l>', "<CMD>call VSCodeNotify('workbench.action.navigateRi
 -- Move editors
 vim.keymap.set('n','<C-S-j>', "<CMD>call VSCodeNotify('workbench.action.moveEditorToBelowGroup')<CR>")
 vim.keymap.set('n','<C-S-k>', "<CMD>call VSCodeNotify('workbench.action.moveEditorToAboveGroup')<CR>")
-vim.keymap.set('n','<C-S-h>', "<CMD>call VSCodeNotify('workbench.action.moveEditorToLeftGroup')<CR>")
+vim.keymap.set('n','<C-S-h>', "<CMD>call VSCoeditor.action.clipboardCopyActiondeNotify('workbench.action.moveEditorToLeftGroup')<CR>")
 vim.keymap.set('n','<C-S-l>', "<CMD>call VSCodeNotify('workbench.action.moveEditorToRightGroup')<CR>")
 
 -- Save and exit files
@@ -27,8 +33,6 @@ vim.keymap.set('n','<C-space>', "<CMD>call VSCodeNotify('workbench.action.toggle
 vim.keymap.set('n','<C-S-space>', "<CMD>call VSCodeNotify('workbench.action.toggleAuxiliaryBar')<CR>")
 
 -- File search
-vim.keymap.set('n','<C-p>', "<CMD>Ex<CR>")
-vim.keymap.set('n','<C-e>', "<CMD>call VSCodeNotify('workbench.action.quickOpenLeastRecentlyUsedEditor')<CR>")
 vim.keymap.set('n','<C-s>', "<CMD>call VSCodeNotify('workbench.action.gotoSymbol')<CR>")
 
 -- Zen mode
