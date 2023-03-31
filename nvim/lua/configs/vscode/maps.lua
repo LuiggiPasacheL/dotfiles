@@ -1,9 +1,9 @@
 
 -- Copy to clipboard
-vim.keymap.set('x','<leader>y',  "<CMD>call VSCodeCallVisual('editor.action.clipboardCopyAction', 1)<CR>")
-vim.keymap.set('n','<leader>Y',  "<CMD>call VSCodeCallVisual('editor.action.clipboardCopyAction', 1)<CR>")
-vim.keymap.set('n','<leader>y',  "<CMD>call VSCodeCallVisual('editor.action.clipboardCopyAction', 1)<CR>")
-vim.keymap.set('n','<leader>yy', "<CMD>call VSCodeCallVisual('editor.action.clipboardCopyAction', 1)<CR>")
+vim.keymap.set('x','<leader>y', '"+y')
+vim.keymap.set('n','<leader>Y', '"+yg_')
+vim.keymap.set('n','<leader>y', '"+y')
+vim.keymap.set('n','<leader>yy', '"+yy')
 
 -- Navigation
 vim.keymap.set('n','<C-j>', "<CMD>call VSCodeNotify('workbench.action.navigateDown')<CR>")
