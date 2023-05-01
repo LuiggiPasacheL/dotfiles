@@ -17,10 +17,6 @@ vim.keymap.set('n',"<C-S-l>", "<C-w>L")
 vim.keymap.set('n',"<C-S-k>", "<C-w>K")
 vim.keymap.set('n',"<C-S-j>", "<C-w>J")
 
--- Save and exit files
-vim.keymap.set('n',"<leader>q", "<CMD>q<CR>")
-vim.keymap.set('n',"<leader>w", "<CMD>w<CR>")
-
 -- NvimTree
 vim.keymap.set('n','<C-A-e>', '<CMD>NvimTreeFocus<CR>')
 vim.keymap.set('n','<leader>e', '<CMD>NvimTreeFocus<CR>')
