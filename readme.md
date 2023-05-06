@@ -30,3 +30,8 @@ ln -s ~/.dotfiles/nvim
 cp ~/.dotfiles/starship.toml starship.toml
 ```
 
+Optional configuration
+```sh
+cd ~/.config/gtk-3.0
+ln -s ~/.dotfiles/gtk-3.0/gtk.css
+```
