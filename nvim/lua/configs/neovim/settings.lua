@@ -12,3 +12,5 @@ vim.api.nvim_create_autocmd({ "VimLeave" }, {
         vim.o.guicursor = "a:ver25"
     end }
 )
+
+vim.g.copilot_assume_mapped = true -- Tab to accept completion

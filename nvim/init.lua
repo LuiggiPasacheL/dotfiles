@@ -26,3 +26,4 @@ else
     -- VSCode
     require('configs.vscode')
 end
+
