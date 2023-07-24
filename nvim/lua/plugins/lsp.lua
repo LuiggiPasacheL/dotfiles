@@ -31,6 +31,8 @@ return {
             'pyright'
         })
 
+        lsp.nvim_workspace()
+
         vim.diagnostic.config({
             virtual_text = true,
             signs = true,
@@ -59,9 +61,13 @@ return {
         end)
 
         local cmp = require('cmp')
+
+        local cmp_select = {behavior = cmp.SelectBehavior.Select}
         local cmp_mappings = lsp.defaults.cmp_mappings({
             ['<C-b>'] = cmp.mapping.scroll_docs(-4),
             ['<C-u>'] = cmp.mapping.scroll_docs(4),
+            ['<C-p>'] = cmp.mapping.select_prev_item(cmp_select),
+            ['<C-n>'] = cmp.mapping.select_next_item(cmp_select),
             ['<C-space>'] = cmp.mapping.complete(),
             ['<C-s>'] = cmp.mapping.complete(), -- for windows terminal (ctrl space not working)
             ['<C-e>'] = cmp.mapping.abort(),
@@ -70,11 +76,22 @@ return {
             ['<CR>'] = cmp.mapping.confirm({ select = true }),
         })
 
+        cmp_mappings['<Tab>'] = nil
+        cmp_mappings['<S-Tab>'] = nil
+
         lsp.setup_nvim_cmp({
             mapping = cmp_mappings
         })
 
-        lsp.nvim_workspace()
+        lsp.set_preferences({
+            suggest_lsp_servers = false,
+            sign_icons = {
+                error = 'E',
+                warn = 'W',
+                hint = 'H',
+                info = 'I'
+            }
+        })
 
         lsp.setup()
     end,
