@@ -46,9 +46,8 @@ if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]
 then
     PATH="$HOME/.local/bin:$HOME/bin:$PATH"
 fi
-
-# User specific configurations
-source $HOME/.profile
+# For add new elements to path create
+# ~/.zshenv file
 
 export EDITOR="nvim"
 
