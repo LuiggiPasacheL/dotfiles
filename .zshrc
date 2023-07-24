@@ -46,8 +46,9 @@ if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]
 then
     PATH="$HOME/.local/bin:$HOME/bin:$PATH"
 fi
-export PATH
-export PATH=/usr/pgsql-11/bin/:$PATH
+
+# User specific configurations
+source $HOME/.profile
 
 export EDITOR="nvim"
 
