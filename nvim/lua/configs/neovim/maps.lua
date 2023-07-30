@@ -23,14 +23,14 @@ vim.keymap.set('n','<leader>e', '<CMD>NvimTreeFocus<CR>')
 
 -- Git
 vim.keymap.set('n','<leader>g', '<CMD>G<CR>')
-vim.keymap.set('n', '<leader>gp', '<CMD>Git push<CR>')
 
 -- Telescope
-vim.keymap.set('n','<C-p>', "<cmd>lua require'telescope.builtin'.find_files({ find_command = {'rg', '--files', '--hidden', '-g', '!.git' }})<cr>")
-vim.keymap.set('n','<leader>tg', '<CMD>Telescope git_files<cr>')
-vim.keymap.set('n','<leader>tb', '<CMD>Telescope buffers<cr>')
-vim.keymap.set('n','<C-s>', '<CMD>Telescope treesitter<cr>')
+vim.keymap.set('n','<C-p>', '<CMD>Telescope find_files<cr>')
 vim.keymap.set('n','<C-f>', '<CMD>Telescope live_grep<cr>')
+vim.keymap.set('n','<C-s>', '<CMD>Telescope treesitter<cr>')
 vim.keymap.set('n','<leader>t', '<CMD>TodoTelescope<cr>')
-vim.keymap.set('n','<leader>tt', ':Telescope ')
+vim.keymap.set('n','<leader>b', '<CMD>Telescope buffers<cr>')
+vim.keymap.set('n','<leader>tf', '<CMD>Telescope git_files<cr>')
+vim.keymap.set('n','<leader>tg', '<CMD>Telescope git_status<cr>')
+vim.keymap.set('n','<leader>tc', '<CMD>Telescope colorscheme<cr>')
 

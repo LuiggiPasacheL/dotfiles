@@ -5,7 +5,6 @@ return {
     },
     tag = 'nightly',
     config = function()
-
         require("nvim-tree").setup({
             auto_reload_on_write = true,
             -- open_on_setup = true,
@@ -14,11 +13,27 @@ return {
             },
             remove_keymaps = {
                 "<C-k>"
-            }
+            },
+            actions = {
+                open_file = {
+                    quit_on_open = true,
+                }
+            },
+            renderer = {
+                group_empty = true,
+                highlight_git = true,
+                highlight_opened_files = "all",
+            },
+            update_focused_file = {
+                enable = true,
+            },
+            diagnostics = {
+                enable = true,
+                show_on_dirs = true,
+            },
         })
 
         local function open_nvim_tree(data)
-
             -- buffer is a directory
             local directory = vim.fn.isdirectory(data.file) == 1
 

@@ -62,7 +62,7 @@ return {
 
         local cmp = require('cmp')
 
-        local cmp_select = {behavior = cmp.SelectBehavior.Select}
+        local cmp_select = { behavior = cmp.SelectBehavior.Select }
         local cmp_mappings = lsp.defaults.cmp_mappings({
             ['<C-b>'] = cmp.mapping.scroll_docs(-4),
             ['<C-u>'] = cmp.mapping.scroll_docs(4),

@@ -1,4 +1,4 @@
-Not_vscode = function ()
+Not_vscode = function()
     return vim.g.vscode == nil
 end
 
@@ -26,4 +26,3 @@ else
     -- VSCode
     require('configs.vscode')
 end
-
