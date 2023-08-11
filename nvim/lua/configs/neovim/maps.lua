@@ -25,12 +25,12 @@ vim.keymap.set('n','<leader>e', '<CMD>NvimTreeFocus<CR>')
 vim.keymap.set('n','<leader>g', '<CMD>G<CR>')
 
 -- Telescope
-vim.keymap.set('n','<C-p>', '<CMD>Telescope find_files<cr>')
+vim.keymap.set('n','<C-p>', '<CMD>Telescope git_files<cr>')
 vim.keymap.set('n','<C-f>', '<CMD>Telescope live_grep<cr>')
 vim.keymap.set('n','<C-s>', '<CMD>Telescope treesitter<cr>')
 vim.keymap.set('n','<leader>t', '<CMD>TodoTelescope<cr>')
 vim.keymap.set('n','<leader>b', '<CMD>Telescope buffers<cr>')
-vim.keymap.set('n','<leader>tf', '<CMD>Telescope git_files<cr>')
+vim.keymap.set('n','<leader>tf', '<CMD>Telescope find_files<cr>')
 vim.keymap.set('n','<leader>tg', '<CMD>Telescope git_status<cr>')
 vim.keymap.set('n','<leader>tc', '<CMD>Telescope colorscheme<cr>')
 
