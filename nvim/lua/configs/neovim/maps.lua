@@ -22,7 +22,7 @@ vim.keymap.set('n','<C-A-e>', '<CMD>NvimTreeFocus<CR>')
 vim.keymap.set('n','<leader>e', '<CMD>NvimTreeFocus<CR>')
 
 -- Git
-vim.keymap.set('n','<leader>g', '<CMD>G<CR>')
+vim.keymap.set('n','<leader>g', '<CMD>vertical rightbelow G<CR>')
 
 -- Telescope
 vim.keymap.set('n','<C-p>', '<CMD>Telescope git_files<cr>')

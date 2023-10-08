@@ -7,10 +7,10 @@ vim.g.Guifont = "JetBrainsMono , 'Hack Nerd Font Mono', Consolas, 'Courier New',
 vim.g.tokyonight_transparent_sidebar = true
 vim.g.tokyonight_transparent = true
 
-vim.opt.tabstop = 4
-vim.opt.softtabstop = 4
-vim.opt.shiftwidth = 4
-vim.opt.expandtab = true
+vim.opt.tabstop = 4 -- insert 4 spaces for a tab
+vim.opt.softtabstop = 4 -- insert 4 spaces for a tab in insert mode
+vim.opt.shiftwidth = 4 -- when indenting with '>', use 4 spaces width
+vim.opt.expandtab = true -- use spaces instead of tabs
 vim.opt.hlsearch = false
 vim.opt.incsearch = true
 vim.opt.smartindent = true
