@@ -24,7 +24,7 @@ SAVEHIST=100000
 setopt autocd extendedglob
 unsetopt beep nomatch notify
 
-bindkey -e
+bindkey -v
 bindkey  "^[[H"   beginning-of-line
 bindkey  "^[[F"   end-of-line
 bindkey  "^[[3~"  delete-char
@@ -35,24 +35,24 @@ bindkey '^[[B' history-substring-search-down
 
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
-zstyle :compinstall filename '/home/luiggi/.zshrc'
+zstyle :compinstall filename "$HOME/.zshrc"
 
 autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
-# User specific environment
-if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]
-then
-    PATH="$HOME/.local/bin:$HOME/bin:$PATH"
-fi
-# For add new elements to path create
-# ~/.zshenv file
-
 export EDITOR="nvim"
+
+export NVM_DIR="$HOME/.nvm"
+export NVM_COMPLETION=true
+
+# NOTE: To add new elements to path create
+# ~/.zshenv file
+# Example: export PATH="$PATH:$HOME/go/bin"
 
 # aliases
 alias v="nvim ."
 
-export NVM_DIR="$HOME/.nvm"
-export NVM_COMPLETION=true
+# Note: To add new sources create
+# ~/.zlogin file
+# Example: source /usr/share/doc/fzf/examples/key-bindings.zsh for fzf keybindings
