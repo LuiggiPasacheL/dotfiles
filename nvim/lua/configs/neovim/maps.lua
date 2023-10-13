@@ -5,6 +5,9 @@ vim.keymap.set('n','<leader>Y', '"+yg_')
 vim.keymap.set('n','<leader>y', '"+y')
 vim.keymap.set('n','<leader>yy', '"+yy')
 
+-- Nohl
+vim.keymap.set('n', '<ESC>', '<CMD>nohlsearch<CR>')
+
 -- Navigation
 vim.keymap.set('n',"<C-h>", "<C-w>h")
 vim.keymap.set('n',"<C-l>", "<C-w>l")
@@ -33,4 +36,3 @@ vim.keymap.set('n','<leader>b', '<CMD>Telescope buffers<cr>')
 vim.keymap.set('n','<leader>tf', '<CMD>Telescope find_files<cr>')
 vim.keymap.set('n','<leader>tg', '<CMD>Telescope git_status<cr>')
 vim.keymap.set('n','<leader>tc', '<CMD>Telescope colorscheme<cr>')
-
