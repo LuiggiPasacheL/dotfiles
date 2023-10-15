@@ -51,7 +51,7 @@ export NVM_COMPLETION=true
 # Example: export PATH="$PATH:$HOME/go/bin"
 
 # aliases
-alias v="nvim ."
+alias v='tmux new-session -A -s `basename $PWD` nvim .'
 
 # Note: To add new sources create
 # ~/.zlogin file
