@@ -40,4 +40,4 @@ vim.keymap.set('n','<leader>tg', '<CMD>Telescope git_status<cr>')
 vim.keymap.set('n','<leader>tc', '<CMD>Telescope colorscheme<cr>')
 
 -- Treesitter
-vim.keymap.set('n','<leader>h', '<CMD>TSEnable *<cr>')
+vim.keymap.set('n','<leader>h', '<CMD>TSEnable highlight<cr>')
