@@ -104,60 +104,6 @@ return {
             severity_sort = false,
             float = true,
         })
-        --
-        -- lsp.on_attach(function(client, bufnr)
-        --     local opts = { remap = false, buffer = bufnr }
-        --
-        --     vim.keymap.set('n', 'gr', require('telescope.builtin').lsp_references, opts)
-        --     vim.keymap.set('n', 'gt', vim.lsp.buf.type_definition, opts)
-        --     vim.keymap.set('n', 'gh', vim.lsp.buf.signature_help, opts)
-        --
-        --     vim.keymap.set({"n", "v", "i"}, '<C-.>', vim.lsp.buf.code_action, opts)
-        --     vim.keymap.set('n', '<leader>a', vim.lsp.buf.code_action, opts)
-        --
-        --     vim.keymap.set('n', '<leader>f', function() vim.lsp.buf.format { async = true } end, opts)
-        --     vim.keymap.set('n', '<leader>n', vim.diagnostic.goto_next, opts)
-        --     vim.keymap.set('n', '<leader>p', vim.diagnostic.goto_prev, opts)
-        --     vim.keymap.set('n', '<leader>wa', vim.lsp.buf.add_workspace_folder, opts)
-        --     vim.keymap.set('n', '<leader>wr', vim.lsp.buf.remove_workspace_folder, opts)
-        --     vim.keymap.set('n', '<leader>wl', function() print(vim.inspect(vim.lsp.buf.list_workspace_folders())) end,
-        --         opts)
-        -- end)
-        --
-        -- local cmp = require('cmp')
-        --
-        -- local cmp_select = { behavior = cmp.SelectBehavior.Select }
-        -- local cmp_mappings = lsp.defaults.cmp_mappings({
-        --     ['<C-b>'] = cmp.mapping.scroll_docs(-4),
-        --     ['<C-u>'] = cmp.mapping.scroll_docs(4),
-        --     ['<C-p>'] = cmp.mapping.select_prev_item(cmp_select),
-        --     ['<C-n>'] = cmp.mapping.select_next_item(cmp_select),
-        --     ['<C-space>'] = cmp.mapping.complete(),
-        --     ['<C-s>'] = cmp.mapping.complete(), -- for windows terminal (ctrl space not working)
-        --     ['<C-e>'] = cmp.mapping.abort(),
-        --     ['<C-k>'] = cmp.mapping.select_prev_item(),
-        --     ['<C-j>'] = cmp.mapping.select_next_item(),
-        --     ['<CR>'] = cmp.mapping.confirm({ select = true }),
-        -- })
-        --
-        -- cmp_mappings['<Tab>'] = nil
-        -- cmp_mappings['<S-Tab>'] = nil
-        --
-        -- lsp.setup_nvim_cmp({
-        --     mapping = cmp_mappings
-        -- })
-        --
-        -- lsp.set_preferences({
-        --     suggest_lsp_servers = false,
-        --     sign_icons = {
-        --         error = 'E',
-        --         warn = 'W',
-        --         hint = 'H',
-        --         info = 'I'
-        --     }
-        -- })
-        --
-        -- lsp.setup()
     end,
     cond = Not_vscode()
 }
