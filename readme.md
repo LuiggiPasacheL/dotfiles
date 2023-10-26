@@ -32,7 +32,7 @@ sudo dnf install nodejs
 Copy configuration dir config
 ```sh
 cd ~
-ln -s ~/.dotfiles/.zshrc
+cp ~/.dotfiles/.zshrc ~/.zshrc
 ln -s ~/.dotfiles/.tmux.conf
 cd ~/.config
 ln -s ~/.dotfiles/nvim

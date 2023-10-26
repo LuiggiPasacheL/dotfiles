@@ -46,13 +46,5 @@ export EDITOR="nvim"
 export NVM_DIR="$HOME/.nvm"
 export NVM_COMPLETION=true
 
-# NOTE: To add new elements to path create
-# ~/.zshenv file
-# Example: export PATH="$PATH:$HOME/go/bin"
-
 # aliases
 alias v='[ -n "$TMUX" ] && nvim . || tmux new-session -A -s `basename $PWD` nvim .' # open neovim in tmux session
-
-# Note: To add new sources create
-# ~/.zlogin file
-# Example: source /usr/share/doc/fzf/examples/key-bindings.zsh for fzf keybindings
