@@ -48,3 +48,5 @@ export NVM_COMPLETION=true
 
 # aliases
 alias v='[ -n "$TMUX" ] && nvim . || tmux new-session -A -s `basename $PWD` nvim .' # open neovim in tmux session
+#alias cat="bat --paging=never --style=plain" # alias bat to cat
+
