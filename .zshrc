@@ -24,7 +24,7 @@ SAVEHIST=100000
 setopt autocd extendedglob
 unsetopt beep nomatch notify
 
-bindkey -v
+bindkey -e
 bindkey  "^[[H"   beginning-of-line
 bindkey  "^[[F"   end-of-line
 bindkey  "^[[3~"  delete-char
