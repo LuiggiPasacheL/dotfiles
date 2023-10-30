@@ -46,7 +46,12 @@ export EDITOR="nvim"
 export NVM_DIR="$HOME/.nvm"
 export NVM_COMPLETION=true
 
-# aliases
-alias v='[ -n "$TMUX" ] && nvim . || tmux new-session -A -s `basename $PWD` nvim .' # open neovim in tmux session
-#alias cat="bat --paging=never --style=plain" # alias bat to cat
-
+# aliases (Unncoment to use)
+# alias tv='[ -n "$TMUX" ] && nvim . || tmux new-session -A -s `basename $PWD` nvim .' # open neovim in tmux session
+# alias v="nvim ."
+# alias cat="bat --paging=never --style=plain" # alias bat to cat
+# alias ls="eza"
+# alias zshc="nvim ~/.zshrc"
+# alias tmuxc="nvim ~/.tmux.conf"
+# alias nvimc="nvim ~/.config/nvim/init.vim"
+# alias config="cd ~/.config"
