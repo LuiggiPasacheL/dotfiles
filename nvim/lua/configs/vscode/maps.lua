@@ -14,7 +14,7 @@ vim.keymap.set('n','<C-l>', "<CMD>call VSCodeNotify('workbench.action.navigateRi
 -- Move editors
 vim.keymap.set('n','<C-S-j>', "<CMD>call VSCodeNotify('workbench.action.moveEditorToBelowGroup')<CR>")
 vim.keymap.set('n','<C-S-k>', "<CMD>call VSCodeNotify('workbench.action.moveEditorToAboveGroup')<CR>")
-vim.keymap.set('n','<C-S-h>', "<CMD>call VSCoeditor.action.clipboardCopyActiondeNotify('workbench.action.moveEditorToLeftGroup')<CR>")
+vim.keymap.set('n','<C-S-h>', "<CMD>call VSCodeNotify('workbench.action.moveEditorToLeftGroup')<CR>")
 vim.keymap.set('n','<C-S-l>', "<CMD>call VSCodeNotify('workbench.action.moveEditorToRightGroup')<CR>")
 
 -- File explorer
@@ -27,6 +27,9 @@ vim.keymap.set('n','<leader>g', "<CMD>call VSCodeNotify('magit.status')<CR>")
 -- Sidebars
 vim.keymap.set('n','<C-space>', "<CMD>call VSCodeNotify('workbench.action.toggleSidebarVisibility')<CR>")
 vim.keymap.set('n','<C-S-space>', "<CMD>call VSCodeNotify('workbench.action.toggleAuxiliaryBar')<CR>")
+
+-- Set NoHL
+vim.keymap.set('n', '<ESC>', '<CMD>nohlsearch<CR>')
 
 -- File search
 vim.keymap.set('n','<C-s>', "<CMD>call VSCodeNotify('workbench.action.gotoSymbol')<CR>")
