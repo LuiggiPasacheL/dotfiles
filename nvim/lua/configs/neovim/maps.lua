@@ -41,3 +41,6 @@ vim.keymap.set('n','<leader>tc', '<CMD>Telescope colorscheme<cr>')
 
 -- Treesitter
 vim.keymap.set('n','<leader>h', '<CMD>TSEnable highlight<cr>')
+
+-- Restart LSP
+vim.keymap.set('n','<leader>r', '<CMD>LspRestart<cr>')
