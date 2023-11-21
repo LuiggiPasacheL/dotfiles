@@ -22,5 +22,6 @@ if (Test-Path($ChocolateyProfile)) {
 
 # Aliases
 Set-Alias -Name lg -Value lazygit
+Set-Alias -Name curl -Value curl.exe
 function v { nvim .}
 function profilec { nvim $PROFILE }
