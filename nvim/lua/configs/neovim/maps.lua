@@ -39,8 +39,5 @@ vim.keymap.set('n','<leader>tf', '<CMD>Telescope find_files<cr>')
 vim.keymap.set('n','<leader>tg', '<CMD>Telescope git_status<cr>')
 vim.keymap.set('n','<leader>tc', '<CMD>Telescope colorscheme<cr>')
 
--- Treesitter
-vim.keymap.set('n','<leader>h', '<CMD>TSEnable highlight<cr>')
-
 -- Restart LSP
 vim.keymap.set('n','<leader>r', '<CMD>LspRestart<cr>')
