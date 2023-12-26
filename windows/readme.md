@@ -27,6 +27,7 @@ curl.exe -o Hack.zip https://github.com/ryanoasis/nerd-fonts/releases/download/v
 ```sh
 cd ~
 cp ~/.dotfiles/windows/Microsoft.PowerShell_profile.ps1 ~/Documents/WindowsPowerShell/Microsoft.PowerShell_profile.ps1
+New-Item -ItemType SymbolicLink -Path "$HOME\AppData\Local\nvim" -Target "$HOME\.dotfiles\nvim"
 New-Item -Path ~/.dotfiles/nvim -ItemType SymbolicLink -Value ~/AppData/Local/nvim
 cd ~/.config
 cp ~/.dotfiles/starship.toml starship.toml
