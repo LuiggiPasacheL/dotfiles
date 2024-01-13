@@ -6,15 +6,22 @@ vim.opt.background = "dark"
 
 vim.cmd.colorscheme("tokyonight")
 
-vim.api.nvim_create_autocmd({ "VimEnter" }, {
-    callback = function()
-        vim.cmd([[TSEnable highlight]])
-    end
-})
-
 vim.api.nvim_create_autocmd({ "VimLeave" }, {
     callback = function()
         vim.o.guicursor = "a:ver25"
+    end
+})
+
+-- local function enableTreesitter()
+--     vim.cmd [[TSEnable highlight]]
+-- end
+--
+vim.api.nvim_create_autocmd({ "VimEnter" }, {
+    callback = function ()
+        local function f()
+            vim.cmd [[TSEnable highlight]]
+        end
+        vim.defer_fn(f, 100)
     end
 })
 
