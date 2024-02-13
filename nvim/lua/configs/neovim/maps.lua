@@ -18,6 +18,8 @@ vim.keymap.set('n', "<C-S-h>", "<C-w>H")
 vim.keymap.set('n', "<C-S-l>", "<C-w>L")
 vim.keymap.set('n', "<C-S-k>", "<C-w>K")
 vim.keymap.set('n', "<C-S-j>", "<C-w>J")
+vim.keymap.set('n', "<C-n>", "<CMD>vsplit<CR>")
+vim.keymap.set('n', "<C-m>", "<CMD>split<CR>")
 
 -- NvimTree
 vim.keymap.set('n', '<C-A-e>', '<CMD>Oil<CR>')
