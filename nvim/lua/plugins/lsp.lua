@@ -57,7 +57,17 @@ return {
                 lua_ls = function()
                     local lua_opts = lsp_zero.nvim_lua_ls()
                     require('lspconfig').lua_ls.setup(lua_opts)
-                end
+                end,
+                jdtls = function()
+                    require('lspconfig').jdtls.setup({
+                        cmd = {
+                            "jdtls",
+                            -- "--jvm-arg=" .. string.format("-javaagent:%s", vim.fn.expand "$MASON/share/jdtls/lombok.jar"),
+                            "--jvm-arg=" .. string.format("-javaagent:%s", vim.fn.expand "$HOME/.m2/repository/org/projectlombok/lombok/1.18.26/lombok-1.18.26.jar"),
+                        },
+                    })
+                end,
+
             },
         })
 
