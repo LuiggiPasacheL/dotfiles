@@ -22,8 +22,9 @@ vim.keymap.set('n', "<leader>v", "<CMD>vsplit<CR>")
 vim.keymap.set('n', "<leader>b", "<CMD>split<CR>")
 
 -- NvimTree
-vim.keymap.set('n', '<C-A-e>', '<CMD>Oil<CR>')
-vim.keymap.set('n', '<leader>e', '<CMD>Oil<CR>')
+vim.keymap.set('n', '<C-A-e>', '<CMD>NvimTreeFindFile<CR>')
+vim.keymap.set('n', '<leader>e', '<CMD>NvimTreeFindFile<CR>')
+vim.keymap.set('n', '<leader>E', '<CMD>Oil<CR>')
 
 -- Git
 vim.keymap.set('n', '<leader>gs', '<CMD>vertical rightbelow G<CR>')
