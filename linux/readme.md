@@ -29,6 +29,7 @@ Copy configuration dir config
 ```sh
 cd ~
 cp ~/.dotfiles/linux/.zshrc ~/.zshrc
+ln -s ~/.dotfiles/linux/.zsh_profile
 ln -s ~/.dotfiles/linux/.tmux.conf
 cd ~/.config
 ln -s ~/.dotfiles/nvim
