@@ -67,10 +67,7 @@ return {
                     require('lspconfig').jdtls.setup({
                         cmd = {
                             "jdtls",
-                            -- "--jvm-arg=" .. string.format("-javaagent:%s", vim.fn.expand "$MASON/share/jdtls/lombok.jar"),
-                            "--jvm-arg=" ..
-                            string.format("-javaagent:%s",
-                                vim.fn.expand "$HOME/.m2/repository/org/projectlombok/lombok/1.18.26/lombok-1.18.26.jar"),
+                            "--jvm-arg=" .. string.format("-javaagent:%s", vim.fn.expand "$MASON/share/jdtls/lombok.jar"),
                         },
                     })
                 end,
