@@ -18,10 +18,12 @@ vim.keymap.set('n', "<C-S-h>", "<C-w>H")
 vim.keymap.set('n', "<C-S-l>", "<C-w>L")
 vim.keymap.set('n', "<C-S-k>", "<C-w>K")
 vim.keymap.set('n', "<C-S-j>", "<C-w>J")
+vim.keymap.set('n', "<leader>v", "<CMD>vsplit<CR>")
+vim.keymap.set('n', "<leader>b", "<CMD>split<CR>")
 
 -- NvimTree
-vim.keymap.set('n', '<C-A-e>', '<CMD>NvimTreeFocus<CR>')
-vim.keymap.set('n', '<leader>e', '<CMD>NvimTreeFocus<CR>')
+vim.keymap.set('n', '<C-A-e>', '<CMD>Oil<CR>')
+vim.keymap.set('n', '<leader>e', '<CMD>Oil<CR>')
 
 -- Git
 vim.keymap.set('n', '<leader>gs', '<CMD>vertical rightbelow G<CR>')
