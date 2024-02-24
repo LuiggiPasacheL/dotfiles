@@ -1,8 +1,10 @@
 -- Copy to clipboard
-vim.keymap.set('x', '<leader>y', '"+y')
-vim.keymap.set('n', '<leader>Y', '"+yg_')
-vim.keymap.set('n', '<leader>y', '"+y')
-vim.keymap.set('n', '<leader>yy', '"+yy')
+vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
+vim.keymap.set("n", "<leader>Y", [["+Y]])
+
+vim.keymap.set("x", "<leader>p", [["_dP]])
+
+vim.keymap.set({"n", "v"}, "<leader>d", [["_d]])
 
 -- Nohl
 vim.keymap.set('n', '<ESC>', '<CMD>nohlsearch<CR>')
@@ -19,7 +21,7 @@ vim.keymap.set('n', "<C-S-l>", "<C-w>L")
 vim.keymap.set('n', "<C-S-k>", "<C-w>K")
 vim.keymap.set('n', "<C-S-j>", "<C-w>J")
 vim.keymap.set('n', "<leader>v", "<CMD>vsplit<CR>")
-vim.keymap.set('n', "<leader>b", "<CMD>split<CR>")
+vim.keymap.set('n', "<leader>s", "<CMD>split<CR>")
 
 -- NvimTree
 vim.keymap.set('n', '<C-A-e>', '<CMD>NvimTreeFindFile<CR>')
