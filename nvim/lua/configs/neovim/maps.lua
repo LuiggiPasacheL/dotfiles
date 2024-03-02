@@ -46,3 +46,6 @@ vim.keymap.set('n', '<leader>cc', '<CMD>Telescope colorscheme<cr>')
 
 -- Restart LSP
 vim.keymap.set('n', '<leader>r', '<CMD>LspRestart<cr>')
+
+vim.keymap.set("n", "<leader>k", "<cmd>cprev<CR>zz")
+vim.keymap.set("n", "<leader>j", "<cmd>cnext<CR>zz")
