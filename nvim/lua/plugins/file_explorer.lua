@@ -6,13 +6,26 @@ return {
         config = function()
             require("nvim-tree").setup({
                 auto_reload_on_write = true,
-                -- open_on_setup = true,
                 view = {
                     adaptive_size = true,
                 },
-                remove_keymaps = {
-                    "<C-k>"
-                },
+                on_attach = function(bufnr)
+                    local api = require "nvim-tree.api"
+
+                    local function opts(desc)
+                        return { desc = "nvim-tree: " .. desc, buffer = bufnr, noremap = true, silent = true, nowait = true }
+                    end
+
+                    -- default mappings
+                    api.config.mappings.default_on_attach(bufnr)
+
+                    -- custom mappings
+                    vim.keymap.set('n', '?', api.tree.toggle_help, opts('Help'))
+                    vim.keymap.set('n', "<C-h>", "<C-w>h", opts('Navigate left'))
+                    vim.keymap.set('n', "<C-l>", "<C-w>l", opts('Navigate right'))
+                    vim.keymap.set('n', "<C-k>", "<C-w>k", opts('Navigate up'))
+                    vim.keymap.set('n', "<C-j>", "<C-w>j", opts('Navigate down'))
+                end,
                 actions = {
                     open_file = {
                         quit_on_open = true,
