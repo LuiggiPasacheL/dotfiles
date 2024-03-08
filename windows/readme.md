@@ -1,6 +1,9 @@
 
 # My Windows Dotfiles
 
+**Install packages requirements**
+> g++ or gcc and nodejs 
+
 **Clone into your home directory**
 ```sh
 git clone https://github.com/LuiggiPasacheL/dotfiles ~/.dotfiles
@@ -11,7 +14,7 @@ git clone https://github.com/LuiggiPasacheL/dotfiles ~/.dotfiles
 winget install --id Starship.Starship
 ```
 
-**Download nerdfonts**
+**Download nerdfonts** (TODO: This commands are not working)
 ```sh
 mkdir ~/AppData/Local/Microsoft/Windows/Fonts
 cd ~/AppData/Local/Microsoft/Windows/Fonts
@@ -19,9 +22,6 @@ curl.exe -o RobotoMono.zip https://github.com/ryanoasis/nerd-fonts/releases/down
 curl.exe -o JetBrainsMono.zip https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.2/JetBrainsMono.zip
 curl.exe -o Hack.zip https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.2/Hack.zip
 ```
-
-**Install requirements**
-> g++ and npm 
 
 **Copy configuration dir config**
 ```sh

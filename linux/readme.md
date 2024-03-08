@@ -1,19 +1,22 @@
 
 # My Linux Dotfiles
 
-Clone into your home directory
+**Install packages requirements**
+> g++ or gcc and nodejs (nvm preinstalled by default for zsh)
+
+**Clone into your home directory**
 ```sh
 git clone https://github.com/LuiggiPasacheL/dotfiles ~/.dotfiles
 ```
 
-Install starship, tpm and antigen
+**Install starship, tpm and antigen**
 ```sh
 curl -sS https://starship.rs/install.sh | sh
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 curl -L git.io/antigen > ~/.config/antigen.zsh
 ```
 
-Download nerdfonts
+**Download nerdfonts** (TODO: This commands are not working)
 ```sh
 mkdir ~/.fonts
 cd ~/.fonts
@@ -22,10 +25,7 @@ curl -o JetBrainsMono.zip https://github.com/ryanoasis/nerd-fonts/releases/downl
 curl -o Hack.zip https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.2/Hack.zip
 ```
 
-Install requirements
-> g++
-
-Copy configuration dir config
+**Copy configuration dir config**
 ```sh
 cd ~
 cp ~/.dotfiles/linux/.zshrc ~/.zshrc
