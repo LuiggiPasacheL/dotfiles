@@ -1,7 +1,7 @@
 return {
     {
         'nvim-tree/nvim-tree.lua',
-        dependencies = { 'nvim-tree/nvim-web-devicons', },
+        dependencies = { 'nvim-tree/nvim-web-devicons' },
         tag = 'nightly',
         config = function()
             require("nvim-tree").setup({
@@ -10,14 +10,16 @@ return {
                     adaptive_size = true,
                 },
                 on_attach = function(bufnr)
-                    local api = require "nvim-tree.api"
+                    local api = require("nvim-tree.api")
 
+                    -- default mappings
                     local function opts(desc)
                         return { desc = "nvim-tree: " .. desc, buffer = bufnr, noremap = true, silent = true, nowait = true }
                     end
 
-                    -- default mappings
-                    api.config.mappings.default_on_attach(bufnr)
+                    if api.config.mappings.default_on_attach then
+                        api.config.mappings.default_on_attach(bufnr)
+                    end
 
                     -- custom mappings
                     vim.keymap.set('n', '?', api.tree.toggle_help, opts('Help'))
@@ -96,5 +98,6 @@ return {
                 use_default_keymaps = false,
             })
         end,
+        cond = Not_vscode()
     },
 }
