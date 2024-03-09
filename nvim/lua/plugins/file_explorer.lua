@@ -22,6 +22,9 @@ return {
 
                     -- custom mappings
                     vim.keymap.set('n', '?', api.tree.toggle_help, opts('Help'))
+                    vim.keymap.set('n', '<leader>j', api.node.navigate.sibling.last, opts('Last Sibling'))
+                    vim.keymap.set('n', '<leader>k', api.node.navigate.sibling.first, opts('First Sibling'))
+                    vim.keymap.set('n', 'K', api.node.show_info_popup, opts('Info'))
                     vim.keymap.set('n', "<C-h>", "<C-w>h", opts('Navigate left'))
                     vim.keymap.set('n', "<C-l>", "<C-w>l", opts('Navigate right'))
                     vim.keymap.set('n', "<C-k>", "<C-w>k", opts('Navigate up'))
