@@ -12,10 +12,6 @@ vim.api.nvim_create_autocmd({ "VimLeave" }, {
     end
 })
 
--- local function enableTreesitter()
---     vim.cmd [[TSEnable highlight]]
--- end
---
 vim.api.nvim_create_autocmd({ "VimEnter" }, {
     callback = function ()
         local function f()
