@@ -1,4 +1,3 @@
-
 -- Nohl
 vim.keymap.set('n', '<ESC>', '<CMD>nohlsearch<CR>')
 
@@ -29,12 +28,12 @@ vim.keymap.set("n", "<leader>gl", "<CMD>!tmux new-window -c " .. vim.fn.getcwd()
 
 -- Telescope
 vim.keymap.set('n', '<C-p>', '<CMD>Telescope git_files<cr>')
-vim.keymap.set('n', '<C-p><C-p>', '<CMD>Telescope find_files<cr>')
-vim.keymap.set('n', '<C-f>', '<CMD>Telescope live_grep<cr>')
+vim.keymap.set('n', '<C-f>', '<CMD>Telescope find_files<cr>')
+vim.keymap.set('n', '<C-g>', '<CMD>Telescope live_grep<cr>')
+vim.keymap.set('n', '<C-b>', '<CMD>Telescope buffers<cr>')
 vim.keymap.set('n', '<C-A-o>', '<CMD>Telescope treesitter<cr>')
 vim.keymap.set('n', '<leader>o', '<CMD>Telescope treesitter<cr>')
 vim.keymap.set('n', '<leader>t', '<CMD>TodoTelescope<cr>')
-vim.keymap.set('n', '<leader>b', '<CMD>Telescope buffers<cr>')
 vim.keymap.set('n', '<leader>cc', '<CMD>Telescope colorscheme<cr>')
 
 -- Restart LSP
@@ -42,3 +41,4 @@ vim.keymap.set('n', '<leader>r', '<CMD>LspRestart<cr>')
 
 vim.keymap.set("n", "<leader>k", "<cmd>cprev<CR>zz")
 vim.keymap.set("n", "<leader>j", "<cmd>cnext<CR>zz")
+vim.keymap.set("n", "<leader>q", "<cmd>cclose<CR>zz")
