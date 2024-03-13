@@ -2,7 +2,7 @@
 # My Linux Dotfiles
 
 **Install packages requirements**
-> g++ or gcc and nodejs (nvm preinstalled by default for zsh)
+> ripgrep, g++ or gcc and nodejs (nvm preinstalled by default for zsh)
 
 **Clone into your home directory**
 ```sh

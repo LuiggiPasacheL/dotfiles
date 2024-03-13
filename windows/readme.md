@@ -2,7 +2,7 @@
 # My Windows Dotfiles
 
 **Install packages requirements**
-> g++ or gcc and nodejs 
+> ripgrep, g++ or gcc and nodejs 
 
 **Clone into your home directory**
 ```sh
