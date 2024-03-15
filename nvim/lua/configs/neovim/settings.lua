@@ -4,6 +4,11 @@ vim.opt.signcolumn = 'yes'
 vim.opt.mouse = 'a'
 vim.opt.background = "dark"
 
+vim.opt.fillchars = { fold = " " }
+vim.opt.foldmethod = "indent"
+vim.opt.foldenable = false
+vim.opt.foldlevel = 99
+
 vim.api.nvim_create_autocmd({ "VimLeave" }, {
     callback = function()
         vim.o.guicursor = "a:ver25"
