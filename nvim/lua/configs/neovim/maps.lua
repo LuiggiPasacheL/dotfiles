@@ -42,3 +42,12 @@ vim.keymap.set('n', '<leader>r', '<CMD>LspRestart<cr>')
 vim.keymap.set("n", "<leader>k", "<cmd>cprev<CR>zz")
 vim.keymap.set("n", "<leader>j", "<cmd>cnext<CR>zz")
 vim.keymap.set("n", "<leader>q", "<cmd>cclose<CR>zz")
+
+-- Terminal
+if vim.loop.os_uname().sysname == 'Windows_NT' then
+    vim.keymap.set('n', '<leader>nt', "<cmd>tabnew term://powershell<CR>")
+else
+    vim.keymap.set('n', '<leader>nt', "<cmd>tabnew +term<CR>")
+end
+
+vim.keymap.set('t', '<ESC>', '<C-\\><C-n>')
