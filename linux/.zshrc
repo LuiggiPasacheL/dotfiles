@@ -31,9 +31,12 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
-export EDITOR="nvim"
-
 export NVM_DIR="$HOME/.nvm"
 export NVM_COMPLETION=true
 
-source ~/.zsh_profile
+if [ -s "$HOME/.zsh_profile"]; then
+  source "$HOME/.zsh_profile"
+fi
+
+# Lines added by external software (gcloud)
+

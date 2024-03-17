@@ -1,4 +1,6 @@
 
+# My personal configuration for zsh
+
 # Prompt
 eval "$(starship init zsh)"
 
@@ -14,6 +16,7 @@ bindkey '^[[B' history-substring-search-down
 bindkey -s '^f' "tmux-sessionizer\n"
 
 # Environment variables
+export EDITOR="nvim"
 export JAVA_HOME="/usr/"
 export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border'
 
@@ -21,6 +24,7 @@ export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border'
 if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
+PATH="$HOME/go/bin:$PATH"
 
 # Aliases
 alias config="cd ~/.config"
