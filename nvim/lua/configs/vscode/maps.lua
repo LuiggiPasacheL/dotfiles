@@ -45,3 +45,14 @@ vim.keymap.set('n', 'gcc', '<Plug>VSCodeCommentaryLine')
 
 -- Secondary bar
 vim.keymap.set('n','<leader>t', "<CMD>call VSCodeNotify('todo-tree-view.focus')<CR>")
+
+-- LSP
+vim.keymap.set('n', '<leader>dn', '<CMD>call VSCodeNotify("editor.action.marker.nextInFiles")<CR>')
+vim.keymap.set('n', '<leader>dp', '<CMD>call VSCodeNotify("editor.action.marker.prevInFiles")<CR>')
+
+vim.keymap.set('n', 'gD', '<CMD>call VSCodeNotify("editor.action.goToTypeDefinition")<CR>')
+vim.keymap.set('n', 'gr', '<CMD>call VSCodeNotify("references-view.findReferences")<CR>')
+vim.keymap.set('n', 'gi', '<CMD>call VSCodeNotify("references-view.findImplementations")<CR>')
+vim.keymap.set('n', 'gh', '<CMD>call VSCodeNotify("editor.action.showDefinitionPreviewHover")<CR>')
+
+vim.keymap.set('n', '<leader>a', '<CMD>call VSCodeNotify("editor.action.codeAction")<CR>')
