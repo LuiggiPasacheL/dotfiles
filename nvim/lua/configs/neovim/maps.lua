@@ -45,9 +45,9 @@ vim.keymap.set("n", "<leader>q", "<cmd>cclose<CR>zz")
 
 -- Terminal
 if vim.loop.os_uname().sysname == 'Windows_NT' then
-    vim.keymap.set('n', '<leader>nt', "<cmd>tabnew term://powershell<CR>")
+    vim.keymap.set('n', '<leader>nt', "<cmd>vsplit +term://powershell<CR>")
 else
-    vim.keymap.set('n', '<leader>nt', "<cmd>tabnew +term<CR>")
+    vim.keymap.set('n', '<leader>nt', "<cmd>vsplit +term<CR>")
 end
 
 vim.keymap.set('t', '<ESC>', '<C-\\><C-n>')
