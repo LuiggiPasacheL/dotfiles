@@ -2,7 +2,7 @@ Not_vscode = function()
     return vim.g.vscode == nil
 end
 
-require('configs.global')
+require("configs.global")
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
@@ -25,8 +25,8 @@ require("lazy").setup("plugins", {
 
 if Not_vscode() then
     -- Ordinary Neovim
-    require('configs.neovim')
+    require("configs.neovim")
 else
     -- VSCode
-    require('configs.vscode')
+    require("configs.vscode")
 end

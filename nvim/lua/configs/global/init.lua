@@ -1,2 +1,2 @@
-require('configs.global.settings')
-require('configs.global.maps')
+require("configs.global.settings")
+require("configs.global.maps")

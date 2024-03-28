@@ -1,3 +1,3 @@
 return {
-    'bkad/CamelCaseMotion',
+    "bkad/CamelCaseMotion",
 }

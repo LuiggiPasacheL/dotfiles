@@ -2,7 +2,7 @@ vim.o.splitright       = true
 
 vim.opt.nu             = true
 vim.opt.relativenumber = true
-vim.opt.signcolumn     = 'yes'
+vim.opt.signcolumn     = "yes"
 vim.opt.mouse          = 'a'
 vim.opt.background     = "dark"
 

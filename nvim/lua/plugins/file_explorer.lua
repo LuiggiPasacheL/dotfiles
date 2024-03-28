@@ -1,7 +1,7 @@
 return {
     {
-        'nvim-tree/nvim-tree.lua',
-        dependencies = { 'nvim-tree/nvim-web-devicons' },
+        "nvim-tree/nvim-tree.lua",
+        dependencies = { "nvim-tree/nvim-web-devicons" },
         config = function()
             require("nvim-tree").setup({
                 auto_reload_on_write = true,
@@ -21,14 +21,14 @@ return {
                     end
 
                     -- custom mappings
-                    vim.keymap.set('n', '?', api.tree.toggle_help, opts('Help'))
-                    vim.keymap.set('n', '<leader>j', api.node.navigate.sibling.last, opts('Last Sibling'))
-                    vim.keymap.set('n', '<leader>k', api.node.navigate.sibling.first, opts('First Sibling'))
-                    vim.keymap.set('n', 'K', api.node.show_info_popup, opts('Info'))
-                    vim.keymap.set('n', "<C-h>", "<C-w>h", opts('Navigate left'))
-                    vim.keymap.set('n', "<C-l>", "<C-w>l", opts('Navigate right'))
-                    vim.keymap.set('n', "<C-k>", "<C-w>k", opts('Navigate up'))
-                    vim.keymap.set('n', "<C-j>", "<C-w>j", opts('Navigate down'))
+                    vim.keymap.set("n", "?", api.tree.toggle_help, opts("Help"))
+                    vim.keymap.set("n", "<leader>j", api.node.navigate.sibling.last, opts("Last Sibling"))
+                    vim.keymap.set("n", "<leader>k", api.node.navigate.sibling.first, opts("First Sibling"))
+                    vim.keymap.set("n", "K", api.node.show_info_popup, opts("Info"))
+                    vim.keymap.set("n", "<C-h>", "<C-w>h", opts("Navigate left"))
+                    vim.keymap.set("n", "<C-l>", "<C-w>l", opts("Navigate right"))
+                    vim.keymap.set("n", "<C-k>", "<C-w>k", opts("Navigate up"))
+                    vim.keymap.set("n", "<C-j>", "<C-w>j", opts("Navigate down"))
                 end,
                 actions = {
                     open_file = {
@@ -69,12 +69,12 @@ return {
         cond = Not_vscode()
     },
     {
-        'stevearc/oil.nvim',
+        "stevearc/oil.nvim",
         opts = {},
         -- Optional dependencies
         dependencies = { "nvim-tree/nvim-web-devicons" },
         config = function()
-            require('oil').setup({
+            require("oil").setup({
                 default_file_explorer = false,
                 keymaps = {
                     ["g?"] = "actions.show_help",

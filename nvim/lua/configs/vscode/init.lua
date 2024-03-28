@@ -1,2 +1,2 @@
-require('configs.vscode.settings')
-require('configs.vscode.maps')
+require("configs.vscode.settings")
+require("configs.vscode.maps")

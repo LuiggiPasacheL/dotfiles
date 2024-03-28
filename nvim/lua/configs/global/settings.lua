@@ -1,6 +1,6 @@
 
 vim.g.mapleader = " "
-vim.g.camelcasemotion_key = ','
+vim.g.camelcasemotion_key = ","
 vim.g.operator_sandwich_no_default_key_mappings = 1
 vim.g.Guifont = "JetBrainsMono , 'Hack Nerd Font Mono', Consolas, 'Courier New', monospace"
 vim.g.tokyonight_transparent_sidebar = true
