@@ -30,8 +30,8 @@ vim.keymap.set("n", "<leader>gl", "<CMD>!tmux new-window -c " .. vim.fn.getcwd()
 vim.keymap.set('n', '<C-p>', '<CMD>Telescope git_files<cr>')
 vim.keymap.set('n', '<C-f>', '<CMD>Telescope find_files<cr>')
 vim.keymap.set('n', '<C-g>', '<CMD>Telescope live_grep<cr>')
-vim.keymap.set('n', '<C-b>', '<CMD>Telescope buffers<cr>')
 vim.keymap.set('n', '<C-A-o>', '<CMD>Telescope treesitter<cr>')
+vim.keymap.set('n', '<leader>b', '<CMD>Telescope buffers<cr>')
 vim.keymap.set('n', '<leader>o', '<CMD>Telescope treesitter<cr>')
 vim.keymap.set('n', '<leader>t', '<CMD>TodoTelescope<cr>')
 vim.keymap.set('n', '<leader>cc', '<CMD>Telescope colorscheme<cr>')
@@ -48,7 +48,7 @@ local term = "zsh"
 if vim.loop.os_uname().sysname == 'Windows_NT' then
     term = "powershell"
 end
-vim.keymap.set('n', "<leader>nt", "<cmd>vsplit +term://".. term .. "<CR>")
+vim.keymap.set('n', "<leader>nt", "<cmd>vsplit term://".. term .. "<CR>")
 vim.keymap.set('n', "<leader>Nt", "<cmd>tabnew term://".. term .. "<CR>")
 
 vim.keymap.set('t', '<ESC>', '<C-\\><C-n>')
