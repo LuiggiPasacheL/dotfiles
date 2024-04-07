@@ -17,22 +17,8 @@ bindkey -s '^f' "tmux-sessionizer\n"
 
 # Environment variables
 export EDITOR="nvim"
-export JAVA_HOME="/usr/"
 export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border'
 
-# PATH
-if [ -d "$HOME/.local/bin" ] ; then
-    PATH="$HOME/.local/bin:$PATH"
-fi
+# GO PATH
 PATH="$HOME/go/bin:$PATH"
 
-# Aliases
-alias config="cd ~/.config"
-alias tv='[ -n "$TMUX" ] && nvim . || tmux new-session -A -s `basename $PWD` nvim .' # open neovim in tmux session
-alias v="nvim ."
-alias cat="bat --paging=never --style=plain" # alias bat to cat
-alias ls="eza"
-alias lg="lazygit"
-alias zshc="nvim ~/.zshrc"
-alias tmuxc="nvim ~/.tmux.conf"
-alias nvimc="nvim ~/.config/nvim/init.vim"

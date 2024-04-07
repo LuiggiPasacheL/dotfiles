@@ -30,6 +30,7 @@ curl -o Hack.zip https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.
 cd ~
 cp ~/.dotfiles/linux/.zshrc ~/.zshrc
 ln -s ~/.dotfiles/linux/.zsh_profile
+cp ~/.dotfiles/linux/.zsh_aliases ~/.zsh_aliases
 ln -s ~/.dotfiles/linux/.tmux.conf
 cd ~/.config
 ln -s ~/.dotfiles/nvim

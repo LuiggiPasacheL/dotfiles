@@ -31,12 +31,26 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
+# Add scripts to path
+if [ -d "$HOME/.local/bin" ] ; then
+    PATH="$HOME/.local/bin:$PATH"
+fi
+
 export NVM_DIR="$HOME/.nvm"
 export NVM_COMPLETION=true
 
-if [ -s "$HOME/.zsh_profile"]; then
+if [ -s "$HOME/.zsh_profile" ]; then
   source "$HOME/.zsh_profile"
 fi
 
+if [ -s "$HOME/.zsh_aliases" ]; then
+  source "$HOME/.zsh_aliases"
+fi
+
+# Add lines to specific configuration. Example:
 # Lines added by external software (gcloud)
+# OR
+# Add lines to specific path
+
+export JAVA_HOME="/usr/"
 
