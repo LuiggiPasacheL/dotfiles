@@ -1,23 +1,24 @@
 
 format = """
-[ $os ($hostname )$username ](bg:#a3aed2 fg:#090c0c)\
+[ $os($hostname )$username ](bg:#a3aed2 fg:#090c0c)\
 [](bg:#769ff0 fg:#a3aed2)\
 $directory\
-[](fg:#769ff0 bg:#394260)\
+[](bg:#394260 fg:#769ff0)\
 $git_branch\
 $git_status\
+$git_metrics\
 [](bg:#212736 fg:#394260)\
+$golang\
+$nodejs\
 $python\
 $conda\
-$nodejs\
-$javascript\
-$java\
-$php\
+$lua\
+$package\
 [](fg:#212736)\
 \n$character"""
 
 right_format = """
-$battery\
+$cmd_duration\
 """
 
 [hostname]
@@ -35,70 +36,34 @@ show_always = true
 
 [os]
 disabled = false
-format = "$symbol"
-symbols.Windows = " "
-symbols.Linux = " "
-symbols.Fedora = " "
-symbols.Arch = " "
-symbols.EndeavourOS = " "
-symbols.Ubuntu = " "
-symbols.Debian = " "
-symbols.Mint = " "
-symbols.Macos = " "
-
-[battery]
-full_symbol = '🔋 '
-charging_symbol = '⚡️ '
-discharging_symbol = '💀 '
-disabled = false
+format = "$symbol "
+symbols.Windows = ""
+symbols.Linux = ""
+symbols.Fedora = ""
+symbols.Arch = ""
+symbols.EndeavourOS = ""
+symbols.Ubuntu = ""
+symbols.Debian = ""
+symbols.Mint = ""
+symbols.Macos = ""
 
 [directory]
-style = "fg:#e3e5e5 bg:#769ff0"
-format = "[ $path ]($style)"
-read_only = " 󰌾"
+style = "fg:#202b39 bg:#769ff0"
+read_only_style = "fg:#202b39 bg:#769ff0"
+format = "[( $read_only)]($read_only_style)[ $path ]($style)"
+read_only = "󰌾"
 truncation_length = 3
 truncation_symbol = "…/"
 truncate_to_repo = true
 
-[git_branch]
-symbol = " "
-style = "bg:#394260"
-format = '[[ $symbol $branch ](fg:#769ff0 bg:#394260)]($style)'
-
-[python]
-symbol = " "
-style = "bg:#212736"
-format = '[[ $symbol $version ($virtualenv )](fg:#769ff0 bg:#212736)]($style)'
-
-[conda]
-symbol = " "
-style = "bg:#212736"
-format = '[[ $symbol$environment ](fg:#769ff0 bg:#212736)]($style)'
-ignore_base = false
-
-[git_status]
-style = "bg:#394260"
-format = '[[($all_status$ahead_behind )](fg:#769ff0 bg:#394260)]($style)'
-
-[nodejs]
-symbol = ""
-style = "bg:#212736"
-format = '[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)'
-
-[rust]
-symbol = ""
-style = "bg:#212736"
-format = '[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)'
-
-[golang]
-symbol = ""
-style = "bg:#212736"
-format = '[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)'
-
-[php]
-symbol = ""
-style = "bg:#212736"
-format = '[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)'
+[cmd_duration]
+min_time = 10_000
+style = "bg:#c61a09 fg:#ffffff"
+format = """
+[](fg:#c61a09 bg:#000000)\
+[took $duration]($style)
+[](fg:#c61a09 bg:#000000)\
+"""
 
 [time]
 disabled = false
@@ -106,53 +71,46 @@ time_format = "%R" # Hour:Minute Format
 style = "bg:#1d2230"
 format = '[[  $time ](fg:#a0a9cb bg:#1d2230)]($style)'
 
-[aws]
-symbol = " "
+[git_branch]
+symbol = ""
+style = "fg:#769ff0 bg:#394260"
+format = '[ $symbol $branch ]($style)'
 
-[buf]
-symbol = " "
+[git_status]
+style = "fg:#769ff0  bg:#394260"
+format = '[$all_status$ahead_behind]($style)'
 
-[c]
-symbol = " "
+[git_metrics]
+format = '[( +$added )](fg:#c61a09 bg:#394260)[(-$deleted)](fg:#0096C7 bg:#394260)'
+disabled = false
 
-[dart]
-symbol = " "
+[python]
+symbol = ""
+style = "fg:#769ff0 bg:#212736"
+format = '[ $symbol $version ($virtualenv )]($style)'
 
-[docker_context]
-symbol = " "
+[conda]
+symbol = ""
+style = "fg:#769ff0 bg:#212736"
+format = '[ $symbol$environment ]($style)'
+ignore_base = false
 
-[elixir]
-symbol = " "
+[golang]
+symbol = ""
+style = "fg:#769ff0 bg:#212736"
+format = '[ $symbol ($version) ]($style)'
 
-[elm]
-symbol = " "
+[nodejs]
+symbol = ""
+style = "fg:#769ff0 bg:#212736"
+format = '[ $symbol ($version) ]($style)'
 
-[fossil_branch]
-symbol = " "
-
-[guix_shell]
-symbol = " "
-
-[haskell]
-symbol = " "
-
-[haxe]
-symbol = " "
-
-[hg_branch]
-symbol = " "
+[lua]
+symbol = "󰢱"
+style = "fg:#769ff0 bg:#212736"
+format = '[ $symbol ($version) ]($style)'
 
 [package]
-symbol = "󰏗 "
-
-[pijul_channel]
-symbol = " "
-
-[rlang]
-symbol = "󰟔 "
-
-[ruby]
-symbol = " "
-
-[scala]
-symbol = " "
+symbol = "󰏗"
+style = "fg:#769ff0 bg:#212736"
+format = '[ $symbol ($version) ]($style)'
