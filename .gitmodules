@@ -2,9 +2,7 @@
 [submodule "nvim"]
 	path = nvim
 	url = git@github.com:LuiggiPasacheL/nvimconfig.git
-    branch = master
 
-[submodule "linux/config"]
-	path = linux/config
+[submodule "personal"]
+	path = personal
 	url = git@github.com:LuiggiPasacheL/secondary_dotfiles.git
-    branch = master
