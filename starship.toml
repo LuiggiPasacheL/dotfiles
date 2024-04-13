@@ -86,7 +86,7 @@ format = '[$symbol $branch ]($style)'
 
 [git_status]
 style = "fg:#769ff0  bg:#394260"
-format = '[$all_status ]($style)'
+format = '[($all_status )]($style)'
 
 [git_state]
 style = "fg:#769ff0 bg:#394260"
