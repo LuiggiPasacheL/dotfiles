@@ -81,11 +81,11 @@ format = """
 [git_branch]
 symbol = ""
 style = "fg:#769ff0 bg:#394260"
-format = '[ $symbol $branch ]($style)'
+format = '[ $symbol ($branch )]($style)'
 
 [git_status]
 style = "fg:#769ff0  bg:#394260"
-format = '[$all_status ($ahead_behind )]($style)'
+format = '[( $all_status) ($ahead_behind )]($style)'
 
 [python]
 symbol = ""
