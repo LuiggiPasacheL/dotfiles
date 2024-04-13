@@ -52,5 +52,3 @@ fi
 # OR
 # Add lines to specific path
 
-export JAVA_HOME="/usr/"
-
