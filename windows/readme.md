@@ -14,7 +14,7 @@ git clone https://github.com/LuiggiPasacheL/dotfiles ~/.dotfiles
 winget install --id Starship.Starship
 ```
 
-**Download nerdfonts** (TODO: This commands are not working)
+**Download nerdfonts** <!-- (TODO: This commands are not working) -->
 ```sh
 mkdir ~/AppData/Local/Microsoft/Windows/Fonts
 cd ~/AppData/Local/Microsoft/Windows/Fonts
@@ -23,7 +23,7 @@ curl.exe -o JetBrainsMono.zip https://github.com/ryanoasis/nerd-fonts/releases/d
 curl.exe -o Hack.zip https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.2/Hack.zip
 ```
 
-**Copy configuration dir config**
+**Copy configuration**
 ```sh
 cd ~
 cp ~/.dotfiles/windows/Microsoft.PowerShell_profile.ps1 ~/Documents/WindowsPowerShell/Microsoft.PowerShell_profile.ps1

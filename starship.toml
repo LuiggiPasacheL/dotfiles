@@ -1,4 +1,6 @@
 
+"$schema" = 'https://starship.rs/config-schema.json'
+
 format = """
 [ $os($hostname )$username ](bg:#a3aed2 fg:#090c0c)\
 [](bg:#769ff0 fg:#a3aed2)\
@@ -6,7 +8,6 @@ $directory\
 [](bg:#394260 fg:#769ff0)\
 $git_branch\
 $git_status\
-$git_metrics\
 [](bg:#212736 fg:#394260)\
 $golang\
 $nodejs\
@@ -84,11 +85,7 @@ format = '[ $symbol $branch ]($style)'
 
 [git_status]
 style = "fg:#769ff0  bg:#394260"
-format = '[$all_status$ahead_behind]($style)'
-
-[git_metrics]
-format = '[( +$added )](fg:#c61a09 bg:#394260)[(-$deleted)](fg:#0096C7 bg:#394260)'
-disabled = false
+format = '[$all_status ($ahead_behind )]($style)'
 
 [python]
 symbol = ""
@@ -98,7 +95,7 @@ format = '[ $symbol $version ($virtualenv )]($style)'
 [conda]
 symbol = ""
 style = "fg:#769ff0 bg:#212736"
-format = '[ $symbol$environment ]($style)'
+format = '[ $symbol $environment ]($style)'
 ignore_base = false
 
 [golang]

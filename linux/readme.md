@@ -16,7 +16,7 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 curl -L git.io/antigen > ~/.config/antigen.zsh
 ```
 
-**Download nerdfonts** (TODO: This commands are not working)
+**Download nerdfonts** <!-- (TODO: This commands are not working) -->
 ```sh
 mkdir ~/.fonts
 cd ~/.fonts
@@ -25,14 +25,16 @@ curl -o JetBrainsMono.zip https://github.com/ryanoasis/nerd-fonts/releases/downl
 curl -o Hack.zip https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.2/Hack.zip
 ```
 
-**Copy configuration dir config**
+**Copy configuration**
 ```sh
 cd ~
-cp ~/.dotfiles/linux/.zshrc ~/.zshrc
+cp ~/.dotfiles/linux/.zshrc ~/.zshrc # zshrc must be edited by other apps, example: gcloud
 ln -s ~/.dotfiles/linux/.zsh_profile
 cp ~/.dotfiles/linux/.zsh_aliases ~/.zsh_aliases
 ln -s ~/.dotfiles/linux/.tmux.conf
+```
+```sh
 cd ~/.config
 ln -s ~/.dotfiles/nvim
-cp ~/.dotfiles/starship.toml starship.toml
+ln -s ~/.dotfiles/starship.toml starship.toml
 ```
