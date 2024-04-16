@@ -86,7 +86,10 @@ format = '[$symbol $branch ]($style)'
 
 [git_status]
 style = "fg:#769ff0  bg:#394260"
-format = '[($all_status )]($style)'
+ahead = '⇡${count}'
+diverged = '⇕⇡${ahead_count}⇣${behind_count}'
+behind = '⇣${count}'
+format = '[$all_status ]($style)'
 
 [git_state]
 style = "fg:#769ff0 bg:#394260"
@@ -100,7 +103,7 @@ format = '[$symbol $version ($virtualenv )]($style)'
 [conda]
 symbol = ""
 style = "fg:#769ff0 bg:#212736"
-format = '[$symbol $environment ]($style)'
+format = '[$symbol ($environment )]($style)'
 ignore_base = false
 
 [golang]
