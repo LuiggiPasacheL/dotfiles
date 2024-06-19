@@ -1,5 +1,12 @@
 
 # My personal configuration for zsh
+function v() {
+    if [ -z "$1" ]; then
+        nvim .
+    else
+        nvim $1
+    fi
+}
 
 # Prompt
 eval "$(starship init zsh)"
@@ -13,7 +20,7 @@ bindkey "^[[1;5C" forward-word
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 
-bindkey -s '^f' "tmux-sessionizer\n"
+bindkey -s '^f' "Tmux-sessionizer.sh\n"
 
 # Environment variables
 export EDITOR="nvim"
