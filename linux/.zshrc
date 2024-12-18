@@ -42,9 +42,4 @@ if [ -s "$HOME/.zsh_aliases" ]; then
   source "$HOME/.zsh_aliases"
 fi
 
-# Add lines to specific configuration. Example:
-# Lines added by external software (gcloud)
-# OR
-# Add lines to specific path
-
-# export JAVA_HOME="/usr/" # By example
+# Lines added by external software (e.g. gcloud):
