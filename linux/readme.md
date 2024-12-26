@@ -2,7 +2,7 @@
 # My Linux Dotfiles
 
 **Install packages requirements**
-> ripgrep, g++ or gcc and nodejs (nvm preinstalled by default for zsh)
+> ripgrep, g++ or gcc and nodejs (nvm preinstalled by zsh plugin)
 
 **Clone into your home directory**
 ```sh
@@ -36,5 +36,5 @@ ln -s ~/.dotfiles/linux/.tmux.conf
 ```sh
 cd ~/.config
 ln -s ~/.dotfiles/nvim
-ln -s ~/.dotfiles/starship.toml starship.toml
+cp ~/.dotfiles/starship.toml starship.toml # starship must be personalizable according to host requirements
 ```
