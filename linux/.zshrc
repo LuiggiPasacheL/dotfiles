@@ -30,9 +30,6 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
-export NVM_DIR="$HOME/.nvm"
-export NVM_COMPLETION=true
-
 if [ -s "$HOME/.zsh_config" ]; then
   source "$HOME/.zsh_config"
 fi
