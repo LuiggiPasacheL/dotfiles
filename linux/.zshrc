@@ -33,8 +33,8 @@ compinit
 export NVM_DIR="$HOME/.nvm"
 export NVM_COMPLETION=true
 
-if [ -s "$HOME/.zsh_profile" ]; then
-  source "$HOME/.zsh_profile"
+if [ -s "$HOME/.zsh_config" ]; then
+  source "$HOME/.zsh_config"
 fi
 
 if [ -s "$HOME/.zsh_aliases" ]; then

@@ -2,7 +2,7 @@
 # My Linux Dotfiles
 
 **Install packages requirements**
-> ripgrep, g++ or gcc and nodejs (nvm preinstalled by zsh plugin)
+> ripgrep, g++ or gcc and nodejs
 
 **Clone into your home directory**
 ```sh
@@ -29,10 +29,10 @@ curl -o Hack.zip https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.
 **Copy configuration**
 ```sh
 cd ~
-cp ~/.dotfiles/linux/.zshrc ~/.zshrc # zshrc must be edited by other apps, example: gcloud
-ln -s ~/.dotfiles/linux/.zsh_profile
-cp ~/.dotfiles/linux/.zsh_aliases ~/.zsh_aliases
 ln -s ~/.dotfiles/linux/.tmux.conf
+cp ~/.dotfiles/linux/.zshrc ~/.zshrc # copy because it must be edited by user
+ln -s ~/.dotfiles/linux/.zsh_config
+cp ~/.dotfiles/linux/.zsh_aliases ~/.zsh_aliases # copy because it must be edited by user
 ```
 ```sh
 cd ~/.config
