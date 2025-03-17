@@ -10,7 +10,6 @@ antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle zsh-completions
 antigen bundle zsh-history-substring-search
-antigen bundle lukechilds/zsh-nvm # nvm auto install
 
 antigen apply
 

@@ -9,10 +9,11 @@
 git clone https://github.com/LuiggiPasacheL/dotfiles ~/.dotfiles
 ```
 
-**Install starship, tpm and antigen**
+**Install starship, tpm, mise and antigen**
 ```sh
 curl -sS https://starship.rs/install.sh | sh
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+curl https://mise.run | sh
 curl -L git.io/antigen > ~/.config/antigen.zsh
 ```
 
