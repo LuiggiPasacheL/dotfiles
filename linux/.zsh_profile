@@ -39,6 +39,10 @@ PATH="/usr/local/go/bin:$PATH"
 ## GO PATH
 PATH="$HOME/go/bin:$PATH"
 
-# Add lines to specific ENV variables
-# export JAVA_HOME="/usr/" # By example
+## MISE ACTIVATE
+eval "$(mise activate zsh)"
+
+# Add lines to ENV variables if needed
+# Example:
+# export JAVA_HOME="/usr/" 
 
