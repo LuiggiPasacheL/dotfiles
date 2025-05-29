@@ -30,8 +30,8 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
-if [ -s "$HOME/.zsh_config" ]; then
-  source "$HOME/.zsh_config"
+if [ -s "$HOME/.zsh_configs" ]; then
+  source "$HOME/.zsh_configs"
 fi
 
 if [ -s "$HOME/.zsh_aliases" ]; then

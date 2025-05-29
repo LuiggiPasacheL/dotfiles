@@ -31,7 +31,7 @@ curl -o Hack.zip https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.
 cd ~
 ln -s ~/.dotfiles/linux/.tmux.conf
 cp ~/.dotfiles/linux/.zshrc ~/.zshrc # copy because it must be edited by user
-ln -s ~/.dotfiles/linux/.zsh_config
+ln -s ~/.dotfiles/linux/.zsh_configs
 cp ~/.dotfiles/linux/.zsh_aliases ~/.zsh_aliases # copy because it must be edited by user
 ```
 ```sh
